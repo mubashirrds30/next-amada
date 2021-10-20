@@ -1,0 +1,73 @@
+//mod-quicklink
+.mod-quicklink {
+    .title {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: $clr-white;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        padding: 0.4rem 0;
+        display: block;
+        transition: all 0.3s ease;
+        a{
+            color: $clr-white;
+            &:hover{
+                color: $clr-primary;
+            }
+        }
+    }
+    a.title {
+        &:hover {
+            color: $clr-primary;
+        }
+    }
+    .link {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: $clr-grey;
+        text-transform: uppercase;
+        font-weight: $font-regular;
+        padding: 0.4rem 0;
+        display: block;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $clr-primary;
+        }
+    }
+    .quicklink-item-inner {
+        padding-left: 1.5rem;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .mod-quicklink {
+        .title,
+        .link {
+            padding: 1.2rem 0;
+        }
+        .mb-accord-body {
+            display: none;
+            &.footer-sub-menu-open{
+                display: block;
+            }
+        }
+        .mb-accord-title {
+            position: relative;
+            &:after {
+                content: '+';
+                font-size: 2rem;
+                color: $clr-grey;
+                font-weight: $font-medium;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+            &.open {
+                &:after {
+                    content: '-';
+                }
+            }
+        }
+    }
+}

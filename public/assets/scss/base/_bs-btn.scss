@@ -1,0 +1,106 @@
+.bs-btn {
+    transition: all 0.3s ease;
+    &.btn-default {
+        padding: 1.4rem 4rem;
+        background: $clr-primary;
+        color: $clr-white;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: $font-semibold;
+        border: 1px solid $clr-primary;
+        display: inline-block;
+        &:hover {
+            background: #bf1728;
+        }
+        &:focus{
+            color: $clr-white;
+            border-color: $clr-primary;
+            outline: none;
+        }
+        .icon {
+            display: inline-block;
+            margin-right: 1.2rem;
+            vertical-align: middle;
+        }
+        &.btn-sm{
+            padding: 1.4rem 2rem;
+            border-radius: 0;
+        }
+    }
+    a:hover {
+        color: $clr-white;
+    }
+    &.btn-tile {
+        background: $clr-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 7rem;
+        text-align: left;
+        .text {
+            font-size: 4.8rem;
+            line-height: 5rem;
+            font-weight: $font-black;
+            color: $clr-white;
+            text-transform: uppercase;
+        }
+        &:hover {
+            background: #bf1728;
+        }
+    }
+    &.btn-icon-link {
+        padding: 1.4rem 4rem;
+        background: $clr-white;
+        color: $clr-primary;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: $font-bold;
+        border: 1px solid transparent;
+        text-decoration: none;
+        .icon {
+            display: inline-block;
+            margin-right: 1.2rem;
+            vertical-align: middle;
+        }
+        &:hover {
+            border-color: $clr-primary;
+        }
+        &.btn-sm{
+            padding: 1.4rem 2rem;
+            border-radius: 0;
+        }
+    }
+}
+
+.bs-button {
+    padding-bottom: 7rem;
+    .action-wrap {
+        text-align: center;
+    }
+}
+
+.download-btn {
+    a:hover {
+        color: $clr-primary;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .bs-btn {
+        &.btn-default {
+            padding: 1.6rem 3.3rem 1.5rem;
+            font-size: 1.3rem;
+        }
+        &.btn-tile {
+            .text {
+                font-size: 2.8rem;
+                line-height: 3rem;
+            }
+        }
+    }
+    .bs-button {
+        .bs-btn.btn-icon-link {
+            padding: 1.9rem 2rem 1.8rem;
+        }
+    }
+}

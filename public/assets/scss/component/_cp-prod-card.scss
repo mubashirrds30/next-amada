@@ -1,0 +1,24 @@
+.cp-prod-card {
+  .list {
+    display: flex;
+    margin: -0.5rem;
+    flex-wrap: wrap;
+  }
+  .item {
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+    width: 25%;
+  }
+}
+@media screen and (max-width: $xs) {
+  .cp-prod-card {
+    .list {
+      margin: -0.2rem;
+    }
+    .item {
+      padding: 0 0.2rem;
+      margin: 0.2rem 0;
+      width: 50%;
+    }
+  }
+}

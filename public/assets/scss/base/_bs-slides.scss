@@ -1,0 +1,41 @@
+.bs-slides {
+    display: flex;
+    margin: 0 -3.5rem;
+    .left-side {
+        .img-wrap {
+            display: none;
+            margin-bottom: 3rem;
+        }
+    }
+    .right-side {
+        .img-wrap {
+            min-height: 60rem;
+        }
+    }
+    .left-side {
+        width: 40%;
+        padding: 0 3.5rem;
+    }
+    .right-side {
+        width: 60%;
+        padding: 0 3.5rem;
+    }
+    .mod-count-text {
+        .count,
+        .text {
+            color: #000;
+        }
+    }
+    .banner-title-wrap {
+        left: 5rem;
+        background-color: #d23f4e;
+        padding: 7rem;
+    }
+    .banner-title {
+        &:before {
+            background-color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: $xs) {}

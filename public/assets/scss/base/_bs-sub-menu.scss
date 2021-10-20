@@ -1,0 +1,134 @@
+//bs-sub-menu
+.bs-sub-menu {
+  position: relative;
+  &:hover {
+    .menu-wrap {
+      display: block;
+      .mod-quicklink {
+        .title,
+        .link {
+          &:hover {
+            color: $clr-primary;
+          }
+        }
+      }
+    }
+  }
+  .menu-wrap {
+    display: none;
+    background: $clr-white;
+    padding: 3rem;
+    width: 21rem;
+    position: absolute;
+    z-index: 1;
+    top: 5.6rem;
+    left: -3rem;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    .mod-quicklink {
+      .title,
+      .link {
+        color: $clr-base;
+        margin-bottom: 0;
+        a{
+          color: $clr-base;
+          &:hover{
+            color: $clr-primary;
+          }
+        }
+      }
+      .title{
+        margin-top: 0;
+      }
+    }
+    .quicklink-item-wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &.typ-mega-menu {
+    .menu-wrap {
+      width: 75rem;
+    }
+    .quicklink-item-wrap {
+      margin: 0 -1rem;
+      .quicklink-item {
+        width: 25%;
+        padding: 0 1rem;
+      }
+      &.top {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  &:not(.typ-mega-menu) {
+    a.title {
+      padding: 0.8rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .bs-sub-menu {
+    .menu-wrap {
+      position: relative;
+      top: auto;
+      left: auto;
+      background: transparent;
+      box-shadow: none;
+      padding: 0 3rem 2rem 4rem;
+      width: auto;
+      .quicklink-item-wrap {
+        &.top {
+          margin-bottom: 0;
+        }
+      }
+      &.mb-sub-menu-body{
+        display: none;
+        &.sub-menu-open{
+          display: block;
+        }
+      }
+    }
+    .quicklink-item-wrap {
+      flex-direction: column;
+      .quicklink-item {
+        margin-bottom: 0;
+      }
+    }
+    .mod-quicklink {
+      .mb-accord-title {
+        &:after {
+          color: $clr-black;
+        }
+      }
+    }
+    .mb-sub-menu-title {
+      position: relative;
+      &:after {
+        content: "+";
+        font-size: 2.5rem;
+        color: $clr-primary;
+        font-weight: $font-medium;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3rem;
+      }
+      &.open {
+        &:after {
+          content: "-";
+        }
+      }
+    }
+    &.typ-mega-menu {
+      .quicklink-item-wrap {
+        .quicklink-item {
+          width: 100%;
+        }
+      }
+      .menu-wrap {
+        width: auto;
+      }
+    }
+  }
+}

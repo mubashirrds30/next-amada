@@ -1,0 +1,74 @@
+.bs-event-card {
+  .news-info {
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 2;
+    .date {
+      color: #fff;
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    .desc {
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      font-weight: 700;
+    }
+  }
+  .list {
+    display: flex;
+    margin: 0 -2rem;
+    flex-wrap: wrap;
+  }
+  .item {
+    width: 33%;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+    box-sizing: border-box;
+  }
+  .bs-prod-card:before {
+    display: none;
+  }
+  .bs-prod-card {
+    height: 40rem;
+    transition: all 0.3s;
+    overflow: hidden;
+    .info-wrap {
+      top: auto;
+      bottom: 3rem;
+    }
+  }
+  .bs-news {
+    height: 40rem;
+    transition: all 0.3s;
+  }
+  .bs-prod-card:hover {
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 30%);
+    transform: scale(1.02);
+  }
+  .bs-news:hover {
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 30%);
+    transform: scale(1.02);
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .bs-event-card {
+    .item {
+      width: 100%;
+      margin-bottom: 2.5rem;
+    }
+    .bs-news {
+      height: 28rem;
+    }
+    .bs-prod-card {
+      height: 28rem;
+    }
+  }
+}

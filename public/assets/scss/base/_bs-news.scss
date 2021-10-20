@@ -1,0 +1,93 @@
+//bs-news
+.bs-news {
+  height: 36rem;
+  // padding: 3rem;
+  color: $clr-white;
+  position: relative;
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: block;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    z-index: 1;
+  }
+  .img-wrap {
+    display: block;
+    height: 13rem;
+    margin-bottom: 3rem;
+    
+  }
+  &.img-wrap{
+    img{
+      height: 100%;
+    }
+  }
+  .date {
+    display: block;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: $font-bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .desc {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: $font-bold;
+  }
+  .news-info {
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .news-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &.typ-linkedin {
+    background: #006ea8;
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .bs-news {
+    height: 27rem;
+    // padding: 1.5rem;
+    .news-info {
+      left: 1.5rem;
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+    .desc {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+    .icon {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .img-wrap {
+      height: 13rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: $xxs) {
+  .bs-news {
+    height: 20rem;
+    .img-wrap {
+      height: 8rem;
+    }
+  }
+}

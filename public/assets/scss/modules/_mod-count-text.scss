@@ -1,0 +1,54 @@
+//mod-count-text
+.mod-count-text{
+    display: flex;
+    align-items: center;
+    .count{
+        font-size: 5.4rem;
+        line-height: 5.6rem;
+        color: $clr-white;
+        font-weight: $font-xbold;
+        margin-right: 0.5rem;
+    }
+    .text{
+        font-size: 2rem;
+        line-height: 2.2rem;
+        color: $clr-white;
+        font-weight:$font-bold;
+        max-width: 35rem;
+    }
+    &.typ-sm{
+        .count{
+            font-size: 4rem;
+            line-height: 4.2rem;
+        }
+        .text{
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
+    }
+}
+
+@media screen and (max-width: $xs){
+    .mod-count-text{
+        .count{
+            font-size: 3rem;
+            line-height: 3.2rem;
+        }
+        .text{
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            max-width: initial;
+        }
+        &.typ-sm{
+            align-items: flex-start;
+            .count{
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
+            .text{
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+            }
+        }
+    }
+}

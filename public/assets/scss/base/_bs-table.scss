@@ -1,0 +1,105 @@
+.bs-table {
+    .title {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        font-weight: $font-bold;
+        margin-bottom: 3rem;
+        color: $clr-base;
+    }
+    .table {
+        background: $clr-light-grey;
+        padding: 3rem;
+        width: 100%;
+        td,
+        th {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            color: $clr-base;
+            padding: 0.75rem 1rem;
+            border-right: 1px solid $clr-base-light;
+            border-bottom: 1px solid $clr-base-light;
+            &:first-child {
+                text-align: left;
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
+            .t-highlight {
+                background-color: #e1e0e0;
+            }
+            &:hover {
+                background-color: #dddddd;
+                // font-weight: bold;
+            }
+        }
+        .cm-half {
+            width: 50%;
+        }
+        .text-center {
+            text-align: center !important;
+        }
+        thead{
+            // background: $clr-black;
+            // th{
+            //     color: $clr-white;
+            // }
+            tr{
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .action-wrap{
+        margin: 1rem 0;
+        display: flex;
+        width: 100%;
+        .icon{
+            font-size: 2rem;
+            color: $clr-primary;
+            text-decoration: none;
+            margin-right: 1rem;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .bs-table {
+        margin: 0 -2rem;
+        .table-wrap {
+            overflow-x: auto;
+            padding: 1rem 2rem;
+            background: $clr-light-grey;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .title {
+            padding-left: 2rem;
+        }
+        .table {
+            width: 50rem;
+            padding: 0;
+            max-width: initial;
+            td,
+            th {
+                padding: 1rem;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+            }
+        }
+    }
+}

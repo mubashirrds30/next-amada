@@ -1,0 +1,67 @@
+.bs-faq-card{
+    .bs-prod-card .info-wrap .title {
+        color: #d31c2e;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    .list{
+        display: flex;
+        margin: -0.5rem;
+        flex-wrap: wrap;
+    }
+    .item{
+        width: 50%;
+        max-width: 30rem;
+        margin: 0 3rem 0 0;
+    }
+    .bs-prod-card{
+        background: #f7f7f7;
+        height: 25rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 0.8rem;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        .info-wrap{
+            top: 7rem;
+        }
+        
+        &:hover{
+            border-color: $clr-primary;
+        }
+        .info-wrap:before {
+            display: none;
+        }
+        .prod-link:hover~.info-wrap {
+            transform: none;
+        }
+    }
+    .bs-prod-card:before {
+        display: none;
+    }
+    .icon-upload{
+        font-size: 6rem;
+        color: #d31c2e;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: $xs){
+    .bs-faq-card{
+        margin-top: 3rem;
+        .item{
+            width: 100%;
+        }
+        .bs-prod-card .info-wrap .title {
+            text-align: center;
+        }
+        .bs-prod-card {
+            margin: 2rem 0;
+        }
+    }
+}

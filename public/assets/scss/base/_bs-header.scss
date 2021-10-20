@@ -1,0 +1,98 @@
+//bs-header
+.bs-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.66);
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 0.66)),
+    color-stop(100%, rgba(0, 0, 0, 0))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 )";
+  .logo-wrap {
+    max-width: 13.5rem;
+    cursor: pointer;
+    padding: 2rem 0;
+  }
+  &.typ-solid {
+    background: $clr-white;
+    -webkit-box-shadow: 0px 2px 11px -5px rgba(209, 209, 209, 1);
+    -moz-box-shadow: 0px 2px 11px -5px rgba(209, 209, 209, 1);
+    box-shadow: 0px 2px 11px -5px rgba(209, 209, 209, 1);
+    .bs-nav .nav-link,
+    .bs-side-nav .nav-link .text,
+    .bs-side-nav .nav-link .icon {
+      color: $clr-black;
+    }
+    .bs-side-nav {
+      .menu-btn {
+        span {
+          background: $clr-black;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .bs-header {
+    padding: 0.6rem 1.5rem;
+    .logo-wrap {
+      max-width: 10rem;
+      padding: 0;
+    }
+    .bs-side-nav {
+      .nav-item {
+        margin-right: 1rem;
+        padding: 0.8rem;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+    .bs-nav {
+      .nav-link {
+        color: $clr-black;
+        z-index: 2;
+      }
+    }
+  }
+}
