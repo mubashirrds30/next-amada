@@ -1,0 +1,33 @@
+//bs-product-grid
+.bs-product-grid {
+  .list {
+    // columns: 4;
+    // column-gap: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    margin: 0 -0.5rem;
+    .item {
+      width: 25%;
+      box-sizing: border-box;
+      display: block;
+      margin-bottom: 1rem;
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .bs-product-grid {
+    .list {
+      //   columns: 2;
+      //   column-gap: 0.4rem;
+      margin: 0 -0.2rem;
+      .item {
+        margin-bottom: 0.4rem;
+        width: 50%;
+        padding: 0 0.2rem;
+      }
+    }
+  }
+}

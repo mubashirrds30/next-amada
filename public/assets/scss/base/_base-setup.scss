@@ -1,0 +1,144 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: $clr-white;
+  font-size: 1.4rem;
+  overflow-x: hidden !important;
+  width: 100%;
+  color: $clr-base;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-primary;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $clr-primary;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.main {
+  width: 100%;
+}
+
+.container {
+  max-width: 117rem;
+  margin: 0 auto;
+}
+
+.cm-line-break {
+  display: block;
+}
+
+.cm-bold {
+  font-weight: $font-bold !important;
+}
+
+.set-bg {
+  background-size: cover;
+  .fetch-img-src {
+    display: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 20;
+  }
+}
+
+.js-bg {
+  .js-addto {
+    background-size: cover;
+    .js-img {
+      display: none;
+    }
+  }
+}
+
+.lozad-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.js-acc-title {
+  position: relative;
+  &:after {
+    content: "+";
+    font-size: 2rem;
+    color: $clr-grey;
+    font-weight: $font-medium;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+  &.open {
+    &:after {
+      content: "-";
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .container {
+    width: auto;
+    padding: 0 2rem;
+  }
+  .hidden-xs {
+    display: none !important;
+  }
+}

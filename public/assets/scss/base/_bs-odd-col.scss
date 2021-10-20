@@ -1,0 +1,36 @@
+//bs-chain-info
+.bs-odd-col{
+    >.item{
+        margin-bottom: 15rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:nth-child(odd){
+            .bs-img-desc{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    &.typ-img-lg{
+        .right-side{
+            .img-wrap{
+                height: 55rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $xs){
+    .bs-odd-col{
+        >.item{
+            margin-bottom: 8rem;
+        }
+        &.typ-img-lg{
+            .left-side{
+                .img-wrap{
+                    height: 30rem;
+                }
+            }
+        }
+    }
+}

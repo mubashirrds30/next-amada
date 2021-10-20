@@ -1,0 +1,63 @@
+//bs-side-nav
+.bs-side-nav{
+    .nav-link{
+        &:hover{
+            .icon,.text{
+                color: $clr-primary !important;
+            }
+        }
+        .text{
+            font-size: 1.4rem;
+            color: $clr-white;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+            display: inline-block;
+            vertical-align: middle;
+            transition: all 0.3s ease;
+        }
+        .icon{
+            font-size: 2.2rem;
+            display: inline-block;
+            vertical-align: middle;
+            color: $clr-white;
+            transition: all 0.3s ease;
+        }
+        
+    }
+    .nav-item{
+        margin-right: 3rem;
+        padding: 2rem 0;
+        &:last-child{
+            margin-right: 0;
+            display: none;
+        }
+    }
+    .nav-list{
+        display: flex;
+        align-items: center;
+    }
+    .menu-btn{
+        span{
+            display: block;
+            width: 2.5rem;
+            height: 2px;
+            margin-bottom: 0.6rem;
+            background: $clr-white;
+            transition: all 0.3s ease;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $xs){
+    .bs-side-nav{
+        .nav-item{
+            &:last-child{
+                display: inline-flex;
+            }
+        }
+    }
+}

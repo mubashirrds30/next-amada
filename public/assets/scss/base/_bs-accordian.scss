@@ -1,0 +1,65 @@
+//bs-header
+.bs-accordian {
+    
+      .acc-card {
+        margin-bottom: 2em;
+        position: relative;
+      }
+      .acc-title {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        font-weight: 700;
+        color: #212529;
+        background: #f9f9f9;
+        box-shadow: 0 0 2px rgba(#000, .2);
+        cursor: pointer;
+        display: block;
+        padding: 1em 1.5em;
+        position: relative;
+        text-align: left;
+      }
+      .acc-title .icon-plus{
+          float:right;
+      }
+      .acc-desc {
+        background: #f9f9f9;
+        color: #212529;
+        display: none;
+        margin: 0;
+        padding: 2em;
+        text-align: left;
+        border: 1px solid #f9f9f9;
+      }
+      .acc-desc li{
+        font-weight: 500;
+        list-style: circle;
+        padding: 0.6rem 0rem;
+      } 
+      .acc-desc .list-inside li{
+        font-weight: 400;
+        list-style: circle;
+        list-style-position: inside;
+      } 
+      .js-acc-title:after {
+        right: 1.2rem;
+        color:#000;
+    }
+
+      
+}
+@media screen and (max-width: $xs){
+  .bs-accordian {
+    .acc-title {
+      margin: 0 -3rem;
+      padding: 1em 3rem;
+    }
+    .acc-desc {
+      margin: 0 -3rem;
+      padding: 1em 3rem;
+    }
+    .acc-card {
+      margin-bottom: 0em;
+    }
+    
+  }
+}

@@ -1,0 +1,78 @@
+//bs-form
+.bs-form {
+  .field-label {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: $clr-base;
+    font-weight: $font-medium;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    &.typ-req {
+      position: relative;
+      &:before {
+        content: "*";
+        font-size: 1.4rem;
+        color: $clr-primary;
+        position: absolute;
+        top: 0;
+        right: -0.8rem;
+      }
+    }
+  }
+  .form-control {
+    padding: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    border-radius: 0.2rem;
+    &:not(textarea) {
+      height: 4rem;
+    }
+    &:focus {
+      box-shadow: none;
+      border-color: $clr-black;
+      outline: none;
+    }
+  }
+  .form-group {
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    &.error {
+      padding-bottom: 2rem;
+      position: relative;
+      .form-control {
+        border-color: $clr-primary;
+      }
+      .error-text {
+        position: absolute;
+        bottom: -0.8rem;
+        left: 0;
+      }
+    }
+  }
+  .radio-wrap {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    .bs-radio,
+    .bs-check {
+      margin-right: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .form-action {
+    .bs-btn {
+      margin-right: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .error-text {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: $clr-primary;
+    margin-top: 0.5rem;
+  }
+}

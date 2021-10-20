@@ -1,0 +1,13 @@
+//mod-social-links
+.mod-social-links {
+    display: flex;
+    align-items: center;
+    .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.6rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+//lyt-content
+.lyt-content{
+    padding-top: 7.3rem;
+    .bs-breadcrum{
+        margin: 4rem 0 0 0;
+    }
+}
+
+@media screen and (max-width: $xs){
+    .lyt-content{
+        padding-top: 5rem;
+        .bs-breadcrum{
+            margin: 3rem 0 0 0;
+        }
+    }
+}

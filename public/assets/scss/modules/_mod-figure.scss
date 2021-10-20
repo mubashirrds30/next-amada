@@ -1,0 +1,31 @@
+.mod-figure {
+    .sub-title {
+        text-align: center;
+        padding-top: 0.8rem;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        font-weight: 700;
+        color: #212529;
+    }
+    &.hidden-sm {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .mod-figure {
+        margin-bottom: 2rem;
+        &.hidden-sm {
+            display: block;
+        }
+        &.hidden-xs {
+            display: none;
+        }
+        .sub-title {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            text-align: left;
+            margin-top: 0.5rem;
+        }
+    }
+}

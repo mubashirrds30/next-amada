@@ -1,0 +1,96 @@
+//bs-footer
+.bs-footer{
+    background-color: $clr-secondary;
+    padding: 4rem 0;
+    .quicklink-item-wrap{
+        display: flex;
+        margin: 0 -1rem;
+        .quicklink-item{
+            width: calc(100%/6);
+            padding: 0 1rem;
+            &:last-child{
+                margin-left: auto;
+                .mod-quicklink{
+                    margin-bottom: 2.2rem;
+                }
+            }
+        }
+        &.top{
+            margin-bottom: 4.5rem;
+        }
+        &.bottom{
+            justify-content: space-between;
+        }
+    }
+    .copy-wright{
+        .mod-social-links{
+            margin-bottom: 2rem;
+            display: none;
+        }
+        p{
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            color: $clr-grey;
+            font-weight: $font-regular;
+            margin-bottom: 0.8rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $xs){
+    .bs-footer{
+        padding: 3rem 0;
+        .quicklink-item-wrap{
+            flex-direction: column;
+            .quicklink-item{
+                width: 100%;
+                &:last-child{
+                    margin-left: 0;
+                    .mod-quicklink{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &.top{
+                margin-bottom: 0;
+                .quicklink-item{
+                    
+                    &:first-child{
+                        .item{
+                            border-bottom: 1px solid #333333;
+                            &:last-child{
+                                border:none;
+                            }
+                        }
+                    }
+                    margin-right: 0;
+                }
+            }
+        }
+        .quicklink-item{
+            border-bottom: 1px solid #333333;
+            .mod-social-links{
+                display: none;
+            }
+        }
+        .copy-wright{
+            margin-top: 5rem;
+            .mod-social-links{
+                display: flex;
+                // .wrap{
+                //     &.mb-accord-body{
+                //         display: none;
+                        
+                //     }
+                // }
+            }
+            p{
+                font-size: 1rem;
+                line-height: 1.4rem;
+            }
+        }
+    }
+}

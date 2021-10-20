@@ -1,0 +1,43 @@
+.bs-breadcrum {
+    .list {
+        font-size: 0;
+    }
+    .item {
+        position: relative;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: $clr-base;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: $font-medium;
+        margin-right: 0.5rem;
+        padding-left: 1.1rem;
+        .link {
+            color: $clr-primary;
+        }
+        &::before {
+            content: ">";
+            position: absolute;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:first-child {
+            padding-left: 0rem;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $xs){
+    .bs-breadcrum{
+        .item{
+            font-size: 1rem;
+            line-height: 1.4rem;
+        }
+    }
+}

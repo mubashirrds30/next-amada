@@ -1,0 +1,88 @@
+/*
+@Project : Amada
+@Desc : Amada is a Jquery project
+@type : Ecommerce
+@Author : DigitalSalt
+@Date : 07262021065154;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
+
+/* config include */
+@import "config/variables";
+@import "config/mixin";
+// @import "config/_reboot";
+
+/* reset files */
+@import "base/reset.local";
+@import "base/normalize";
+@import "base/icons";
+
+// @import "base/fonts";
+@import "base/base-setup";
+@import "base/bs-header";
+@import "base/bs-nav";
+@import "base/bs-side-nav";
+@import "base/bs-footer";
+@import "base/bs-section";
+@import "base/bs-product-grid";
+@import "base/bs-prod-card";
+@import "base/bs-two-col";
+@import "base/bs-img-desc";
+@import "base/bs-chain-info";
+@import "base/bs-btn";
+@import "base/bs-news";
+@import "base/bs-banner";
+@import "base/bs-breadcrum";
+@import "base/bs-client-card";
+@import "base/bs-table";
+@import "base/bs-sub-menu";
+@import "base/bs-product-detail";
+@import "base/bs-news-fly";
+@import "base/bs-form";
+@import "base/bs-radio";
+@import "base/bs-upload";
+@import "base/bs-check";
+@import "base/bs-accordian";
+@import "base/bs-odd-col";
+@import "base/bs-col-grid";
+@import "base/bs-faq-card";
+@import "base/bs-event-card";
+@import "base/bs-blog-detail";
+@import "base/bs-swiper";
+@import "base/bs-img-overlay";
+@import "base/bs-add-card";
+@import "base/bs-select";
+@import "base/bs-video";
+@import "base/bs-awards";
+@import "base/bs-features";
+@import "base/bs-award-tile";
+@import "base/bs-slides";
+@import "base/bs-modal";
+@import "base/bs-gallery";
+@import "base/bs-calendar";
+@import "base/datepicker";
+@import "base/bs-404";
+@import "base/bs-alert";
+
+/* modules */
+
+@import "modules/mod-count-text";
+@import "modules/mod-quicklink";
+@import "modules/mod-social-links";
+@import "modules/mod-list";
+@import "modules/mod-card";
+@import "modules/mod-add";
+@import "modules/mod-figure";
+
+/* layout */
+
+@import "layout/lyt-news";
+@import "layout/lyt-content";
+@import "layout/lyt-form";
+@import "layout/lyt-accordian";
+@import "layout/lyt-features";
+@import "layout/lyt-awards";
+
+/* component */
+
+@import "component/cp-prod-card";

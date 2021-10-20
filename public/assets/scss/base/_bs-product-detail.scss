@@ -1,0 +1,57 @@
+//bs-product-detail
+.bs-product-detail {
+    .sec-desc {
+        p {
+            margin-bottom: 2rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .bs-chain-info {
+        .item:last-child {
+            .bs-awards {
+                margin-bottom: 15rem;
+            }
+        }
+        &.typ-reverse {
+            .sec-desc p {
+                line-height: 2.8rem;
+            }
+        }
+    }
+    .bs-table {
+        margin-bottom: 8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .pd-body{
+        margin-top: 3rem;
+    }
+    .sub-title {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        font-weight: $font-bold;
+        color: $clr-base;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .bs-product-detail {
+        .bs-chain-info {
+            .item:last-child {
+                .bs-awards {
+                    margin-bottom: 8rem;
+                }
+            }
+        }
+        .bs-table {
+            margin-bottom: 8rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

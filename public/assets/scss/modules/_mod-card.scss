@@ -1,0 +1,16 @@
+.mod-card {
+    background-color: $clr-white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem;
+    border: 1px solid #333333;
+    .title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: $font-medium;
+        color: $clr-black;
+    }
+}

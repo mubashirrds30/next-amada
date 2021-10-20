@@ -1,0 +1,67 @@
+//bs-chain-info
+.bs-chain-info{
+    >.item{
+        margin-bottom: 9rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:nth-child(even){
+            .bs-img-desc{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    // &.typ-img-lg{
+    //     .right-side{
+    //         .img-wrap{
+    //             height: 55rem;
+    //         }
+    //     }
+    // }
+    &.typ-reverse{
+        >.item{
+            &:nth-child(odd){
+                .bs-img-desc{
+                    flex-direction: row-reverse;
+                }
+            }
+            &:nth-child(even){
+                .bs-img-desc{
+                    flex-direction: row;
+                }
+            }
+        }
+        
+    }
+
+    &.typ-address{
+        .sec-desc p{
+            line-height: 3.8rem;
+        }
+    }
+    &.typ-listing{
+        .bs-img-desc{
+            .right-side{
+                .img-wrap{
+                    height: 33rem;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $xs){
+    .bs-chain-info{
+        >.item{
+            margin-bottom: 8rem;
+        }
+        // &.typ-img-lg{
+        //     .left-side{
+        //         .img-wrap{
+        //             height: 30rem;
+        //         }
+        //     }
+        // }
+    }
+}

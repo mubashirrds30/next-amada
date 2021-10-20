@@ -1,0 +1,34 @@
+//bs-upload
+.bs-upload{
+    position: relative;
+    input[type=file]{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .bs-btn{
+        width: 100%;
+        border:1px dashed $clr-primary;
+        padding: 5rem;
+        border-radius: 0.2rem;
+        .icon{
+            font-size: 4rem;
+        }
+    }
+    .file-name{
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        color: $clr-primary;
+        font-weight: $font-bold;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 1rem;
+        text-align: center;
+    }
+}

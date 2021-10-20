@@ -1,0 +1,17 @@
+//bs-select
+.bs-select{
+    .select2-container{
+        height: 4rem;
+        .select2-selection{
+            border-color: $clr-grey;
+            height: 100%;
+            border-radius: 0.2rem;
+            &__rendered{
+                line-height: 4rem;
+            }
+            &__arrow{
+                height: 4rem;
+            }
+        }
+    }
+}

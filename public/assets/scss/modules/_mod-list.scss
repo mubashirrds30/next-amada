@@ -1,0 +1,135 @@
+//mod-list
+.mod-list {
+  padding-left: 2rem;
+  .item {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $clr-base;
+    font-weight: $font-regular;
+    position: relative;
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: $clr-base;
+      border-radius: 100%;
+      left: -2rem;
+      top: 0.8rem;
+      position: absolute;
+      display: block;
+    }
+  }
+  &.typ-main {
+    .item {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .inside-list {
+    padding-left: 2rem;
+    margin-top: 1rem;
+    li {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: $clr-base;
+      font-weight: $font-regular;
+      position: relative;
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: $clr-base;
+        border-radius: 100%;
+        left: -2rem;
+        top: 0.8rem;
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+}
+
+.mod-list-circle {
+  padding-left: 2rem;
+}
+
+.mod-list-circle li {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  color: #212529;
+  font-weight: 400;
+  list-style: circle;
+  .inside-list li {
+    list-style-position: inside;
+  }
+}
+
+.rich-text {
+  ul {
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+    li {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: $clr-base;
+      font-weight: $font-regular;
+      position: relative;
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: $clr-base;
+        border-radius: 100%;
+        left: -2rem;
+        top: 0.8rem;
+        position: absolute;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .mod-list {
+    .item {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      margin-bottom: 1rem;
+      &:before{
+        left: -1.5rem;
+        top: 0.45rem;
+        width: 6px;
+        height: 6px;
+      }
+      .inside-list {
+        padding-left: 2rem;
+        margin-top: 1rem;
+        li {
+          font-size: 1.2rem;
+          line-height: 1.8rem;
+          margin-bottom: 1rem;
+          &:before{
+            left: -1.5rem;
+            top: 0.65rem;
+            width: 6px;
+            height: 6px;
+          }
+        }
+      }
+    }
+  }
+}

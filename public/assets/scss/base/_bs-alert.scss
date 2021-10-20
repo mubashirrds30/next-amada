@@ -1,0 +1,50 @@
+//bs-alert
+.bs-alert{
+    padding: 1.4rem;
+    background-color: $clr-base;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    margin: 0 auto;
+    z-index: 2;
+    max-width: 50rem;
+    transition: all 0.3s cubic-bezier(0, 0.65, 0.14, 1.08);
+    -webkit-box-shadow: 0px 0px 11px 2px rgba(247,203,203,0.3);
+    -moz-box-shadow: 0px 0px 11px 2px rgba(247,203,203,0.3);
+    box-shadow: 0px 0px 11px 2px rgba(247,203,203,0.3);
+    .msg-greet{
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: $clr-white;
+        display: block;
+        margin-bottom: 0.8rem;
+    }
+    .msg{
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: $clr-base-light;
+        margin-bottom: 0;
+    }
+    &.active{
+        bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: $xs){
+    .bs-alert{
+        box-shadow: none;
+        .msg-greet{
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .msg{
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+        &.active{
+            bottom: 0;
+        }
+    }
+}
