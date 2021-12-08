@@ -3,6 +3,8 @@ import lozad from "lozad";
 import Link from "next/dist/client/link";
 import React, { useEffect } from "react";
 const { REACT_APP_BASE_URL } = process.env;
+import { NewsArticleJsonLd } from 'next-seo';
+
 
 function News({ event }) {
   useEffect(() => {
@@ -110,6 +112,26 @@ function News({ event }) {
           </div>
         </div>
       </div>
+      {event?.news_events?.map((ele, i)=>{
+          return (
+            <>
+            <NewsArticleJsonLd
+              keyOverride={i}
+              url={ele.isLinkedin ? ele.url : `https://www.amada.ae/news-events/${ele.slug}`}
+              title={ele.title}
+              images={[
+                `${REACT_APP_BASE_URL}${ele.smallImage.url}`
+              ]}
+              section="technology"
+              datePublished={ele.date}
+              authorName="Amada"
+              publisherName="Amada Bureau"
+              body={ele.title}
+              publisherLogo="https://www.amada.ae/assets/images/logo.png"
+            />
+            </>
+          )
+         })}
     </div>
   );
 }

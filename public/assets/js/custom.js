@@ -119,7 +119,7 @@ function stickynav() {
     if ($('.pg-home').length != 0) {
         $(window).scroll(function() {
             var y = $(document).scrollTop();
-            console.log(y);
+            // console.log(y);
             if (y >= 100) {
                 header.addClass('typ-solid');
                 header.find('.logo-wrap').find('img').attr('src', 'assets/images/logo.png');

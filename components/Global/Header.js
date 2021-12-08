@@ -3,9 +3,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import lozad from "lozad";
+import { SocialProfileJsonLd } from 'next-seo';
+import { LogoJsonLd } from 'next-seo';
 const { REACT_APP_BASE_URL } = process.env;
 
 function Header({ header, activeLink }) {
+  
   const [openMenus, setOpenMenus] = useState(false);
   const [menuName, setMenuName] = useState("");
   const [openNavbarMenus, setOpenNavbarMenus] = useState(false);
@@ -38,6 +41,28 @@ function Header({ header, activeLink }) {
   };
 
   const { logo, menu, socialMediaLinks } = header && header;
+
+
+  
+  function chunkArray(myArray, chunk_size) {
+    // console.log(myArray, 'myarray')
+    let index = 0
+    let arrayLength = myArray !== undefined ? myArray.length : null;
+    let tempArray = []
+    // console.log(arrayLength, 'array length')
+    
+    for (index = 0; index < arrayLength; index += chunk_size) {
+      let myChunk = myArray.slice(index, index + chunk_size)
+      // Do something if you want with the group
+      tempArray.push(myChunk)
+    }
+
+    return tempArray
+    
+  }
+  // let result = chunkArray(header && header.menu, 4)
+  
+
 
   return (
     <div className="bs-header typ-solid">
@@ -96,13 +121,14 @@ function Header({ header, activeLink }) {
                 </Link>
               )}
 
-              <div
-                className={`menu-wrap mb-sub-menu-body ${
-                  openMenus && menuName === ele.menuName ? "sub-menu-open" : ""
-                }
-                `}
-              >
+              
                 {ele.subMenu && ele.subMenu[0]?.subMenuLink?.length === 0 && (
+                  <div
+                  className={`menu-wrap mb-sub-menu-body ${
+                    openMenus && menuName === ele.menuName ? "sub-menu-open" : ""
+                  }
+                  `}
+                >
                   <ul className="quicklink-item-wrap top">
                     <li className="quicklink-item">
                       <div className="mod-quicklink mb-accord-body">
@@ -138,112 +164,46 @@ function Header({ header, activeLink }) {
                       </div>
                     </li>
                   </ul>
+                  </div>
                 )}
                 {ele.subMenu && ele.subMenu[0]?.subMenuLink?.length > 0 && (
-                  <>
-                    <ul className="quicklink-item-wrap top">
-                      {ele.subMenu.slice(0, 4).map((ele, index) => (
-                        <li className="quicklink-item" key={index}>
-                          <div
-                            className="mod-quicklink mb-accord-body"
-                            onClick={() => handleSubMenus(ele.subMenu)}
-                          >
-                            <h2
-                              className={`title mb-accord-title ${
-                                subMenuName == ele.subMenu && openSubMenu
-                                  ? "open"
-                                  : ""
-                              }`}
-                            >
-                              <a href={ele.URL}>{ele.subMenu}</a>
-                            </h2>
-                            <ul
-                              className="wrap mb-accord-body"
-                              style={
-                                window.innerWidth < 768
-                                  ? {
-                                      display:
-                                        subMenuName == ele.subMenu &&
-                                        openSubMenu
-                                          ? "block"
-                                          : "none",
-                                    }
-                                  : null
-                              }
-                            >
-                              {ele.subMenuLink.map((sub, i) => (
-                                <li className="item" key={i}>
-                                  <a
-                                    href={sub.URL}
-                                    target={`${
-                                      sub.URL && sub.URL.includes("http")
-                                        ? "_blank"
-                                        : "_self"
-                                    }`}
-                                    className="link"
-                                  >
-                                    {sub.subMenuLink}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="quicklink-item-wrap bottom">
-                      {ele.subMenu.slice(4).map((ele, index) => (
-                        <li className="quicklink-item" key={index}>
-                          <div
-                            className="mod-quicklink mb-accord-body"
-                            onClick={() => handleSubMenus(ele.subMenu)}
-                          >
-                            <h2
-                              className={`title mb-accord-title ${
-                                subMenuName == ele.subMenu && openSubMenu
-                                  ? "open"
-                                  : ""
-                              }`}
-                            >
-                              <a href={ele.URL}>{ele.subMenu}</a>
-                            </h2>
-                            <ul
-                              className="wrap mb-accord-body"
-                              style={
-                                window.innerWidth < 768
-                                  ? {
-                                      display:
-                                        subMenuName == ele.subMenu &&
-                                        openSubMenu
-                                          ? "block"
-                                          : "none",
-                                    }
-                                  : null
-                              }
-                            >
-                              {ele.subMenuLink.map((sub, i) => (
-                                <li className="item" key={i}>
-                                  <a
-                                    href={sub.URL}
-                                    target={`${
-                                      sub.URL && sub.URL.includes("http")
-                                        ? "_blank"
-                                        : "_self"
-                                    }`}
-                                    className="link"
-                                  >
-                                    {sub.subMenuLink}
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
+                 <div className={`menu-wrap mb-sub-menu-body ${openMenus && menuName === ele.menuName ? "sub-menu-open" : ""}`}>
+                 {chunkArray(ele && ele.subMenu, 4).map((ql, i) => {
+                   // console.log("ql",  ql)
+                   return(
+                     <ul className="quicklink-item-wrap top">
+                       {ql.map((ell, inn)=>{
+                         return(
+                           <>
+                           <li className="quicklink-item" key={inn}>
+                           <div className="mod-quicklink" onClick={() => handleSubMenus(ell.subMenu)}>
+                               <h2 className={`title mb-accord-title ${subMenuName == ell.subMenu && openSubMenu ? "open" : ""}`}>
+                                   <a href={ell.URL}>{ell.subMenu}</a>
+                               </h2>
+                               <ul className="wrap mb-accord-body"
+                               style={
+                                 window.innerWidth < 768 ? (
+                                   {
+                                     display: subMenuName == ell.subMenu && openSubMenu ? "block" : "none",
+                                   }
+                                 ) : null
+                               }>
+                               {ell.subMenuLink.map((sub, i) => (
+                                 <li className="item" key={i}>
+                                     <a href={sub.URL} target={`${sub.URL && sub.URL.includes("http") ? '_blank' : '_self'}`} className="link">{sub.subMenuLink}</a>
+                                 </li>
+                               ))}
+                               </ul>
+                           </div>
+                           </li>
+                           </>
+                         )
+                       })}
+                     </ul>
+                 )}
+                 )}
+                 </div>
                 )}
-              </div>
             </li>
           ))}
         </ul>
@@ -292,6 +252,19 @@ function Header({ header, activeLink }) {
           </li>
         </ul>
       </div>
+      <SocialProfileJsonLd
+        type="Organization"
+        name="AMADA MIDDLE EAST FZCO"
+        url="https://www.amada.ae/"
+        sameAs={[
+          `${header.socialMediaLinks && header.socialMediaLinks[0]?.link}`,
+          `${header.socialMediaLinks && header.socialMediaLinks[1]?.link}`,
+        ]}
+        />
+        <LogoJsonLd
+        logo="https://www.amada.ae/assets/images/logo.png"
+        url="https://www.amada.ae/"
+      />
     </div>
   );
 }

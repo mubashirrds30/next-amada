@@ -3,6 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const CustomerDetails = () => {
   useEffect(() => {
@@ -298,6 +300,25 @@ const CustomerDetails = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'company profile',
+            item: `https://www.amada.ae/company-profile/customer-details`,
+          },
+          {
+            position: 3,
+            name: 'customer details',
+            item: `https://www.amada.ae/company-profile/customer-details`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );

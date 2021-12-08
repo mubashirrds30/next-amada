@@ -7,6 +7,8 @@ import Layout from "../../../components/Global/Layout";
 import ProductBreadcrum from "../../../components/Product/ProductBreadcrum";
 import ProductInfo from "../../../components/Product/ProductInfo";
 import Head from "next/head";
+import { ProductJsonLd } from 'next-seo';
+
 
 export const getServerSideProps = async (context) => {
   const slug = context.params.product;
@@ -15,9 +17,16 @@ export const getServerSideProps = async (context) => {
   );
   const json = await res.json();
 
-  return {
-    props: { data: json },
-  };
+  if(json.length > 0){
+    return {
+      props: { data: json },
+    }
+  }else{
+    return {
+      notFound : true
+    }
+  }
+
 };
 
 function Product({ data }) {
@@ -27,14 +36,9 @@ function Product({ data }) {
   }, []);
   const nextRouter = useRouter();
 
-  if (data.length > 0) {
-  } else {
-    if (nextRouter != undefined) {
-      typeof window !== "undefined" && nextRouter.push("/404");
-    }
-    return false;
-  }
+  
   const product = data[0];
+  // console.log(product, 'prooo')
 
   return (
     <>
@@ -59,6 +63,22 @@ function Product({ data }) {
             />
           )}
         </main>
+        <ProductJsonLd
+          productName={product.name}
+          images={[
+            `${process.env.REACT_APP_BASE_URL}${product.smallImage.url}`
+          ]}
+          description={product.description}
+          brand="Amada"
+          manufacturerName="AMADA MIDDLE EAST FZCO"
+          manufacturerLogo="https://www.amada.ae/assets/images/logo.png"
+          releaseDate={product.published_at}
+          offers={[
+            {
+              priceCurrency: 'INR',
+              url: `https://www.amada.ae/${product.product_category.slug}/${product.slug}`,
+            },]}
+        />
       </Layout>
     </>
   );
