@@ -87,9 +87,9 @@ function ProductInfo({ product }) {
                     brochure
                   </a>
                 )}
-                {product.ebook && product.ebook !== null && (
+                {product.ebookLink && product.ebookLink !== null && (
                   <a
-                    href={`${REACT_APP_BASE_URL}${product.ebook.url}`}
+                    href={`${product.ebookLink}`}
                     className="bs-btn btn-default download-btn"
                     target="_blank"
                     rel="noreferrer"

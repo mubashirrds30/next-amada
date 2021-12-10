@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import lozad from "lozad";
 const { REACT_APP_BASE_URL } = process.env;
+import { SocialProfileJsonLd } from 'next-seo';
+
 
 function Footer({ footer }) {
+  // console.log(footer)
   const [openSubMenu, setOpenSubMenu] = useState(false);
   const [subMenuName, setSubMenuName] = useState("");
   useEffect(() => {
@@ -23,130 +26,131 @@ function Footer({ footer }) {
     }
   };
 
+  /////////////////////////////////////////////////
+  function chunkArray(myArray, chunk_size) {
+    // console.log(myArray, 'myarray')
+    let index = 0
+    let arrayLength = myArray !== undefined ? myArray.length : null;
+    let tempArray = []
+    // console.log(arrayLength, 'array length')
+    
+    for (index = 0; index < arrayLength; index += chunk_size) {
+      let myChunk = myArray.slice(index, index + chunk_size)
+      // Do something if you want with the group
+      tempArray.push(myChunk)
+    }
+
+    return tempArray
+    
+  }
+  // Split in group of 5 items
+  let result = chunkArray(footer && footer.footerMenu, 6)
+
   return (
     <div>
       <div className="bs-footer">
         <div className="container">
-          <ul className="quicklink-item-wrap top">
-            <li className="quicklink-item">
-              <div className="mod-quicklink">
-                <ul className="wrap">
-                  {footerNav?.slice(0, 1).map((ele, ind) => (
-                    <div key={ind}>
-                      {ele.footerSubmenu.map((el, i) => {
-                        return (
-                          <>
-                            <li className="item" key={i}>
-                              <Link
-                                href={
-                                  el.url === "#" || el.url === ""
-                                    ? "javascript:void(0)"
-                                    : el.url
-                                }
-                              >
-                                <a
-                                  target={`${
-                                    el.url && el.url.includes("http")
-                                      ? "_blank"
-                                      : "_self"
-                                  }`}
-                                  key={i}
-                                  className="title"
-                                >
-                                  {el.subMenu}
-                                </a>
-                              </Link>
-                            </li>
-                          </>
-                        );
-                      })}
-                    </div>
-                  ))}
-                </ul>
-              </div>
-            </li>
-            {footerNav?.slice(1, 6).map((ele, i) => (
-              <li
-                className="quicklink-item"
-                key={i}
-                onClick={() => handleSubMenus(ele.menuName)}
-              >
-                <div className="mod-quicklink">
-                  <h2
-                    className={`title mb-accord-title ${
-                      subMenuName == ele.menuName && openSubMenu ? "open" : ""
-                    }`}
-                  >
-                    <a
-                      href={
-                        ele.url === "#" || ele.url === ""
-                          ? "javascript:void(0)"
-                          : ele.url
-                      }
-                    >
-                      {ele.menuName}
-                    </a>
-                  </h2>
-                  <ul
-                    className={`wrap mb-accord-body ${
-                      subMenuName == ele.menuName && openSubMenu
-                        ? "footer-sub-menu-open"
-                        : ""
-                    }`}
-                  >
-                    {ele?.footerSubmenu?.map((ele, inn) => (
-                      <li className="item" key={inn}>
-                        <a
-                          href={
-                            ele.url === "#" || ele.url === ""
-                              ? "javascript:void(0)"
-                              : ele.url
-                          }
-                          className="link"
-                        >
-                          {ele.subMenu}
-                        </a>
+        { result.slice(0,1).map((items, index) => {
+            // console.log(result, items, 'newitem')
+            return  (
+              <>
+              <ul className="quicklink-item-wrap">
+              {items.slice(0,1).map((item, index)=>{
+                  
+                  return(
+                  
+                      <li key={index} className="quicklink-item">
+                        <div className="mod-quicklink" onClick={() => handleSubMenus(item.menuName)}>
+                          
+                          <ul
+                            className={`wrap ${subMenuName == item.footerSubmenu[0].subMenu && open ? "footer-sub-menu-open" : ""}`}
+                          >
+                            {item.footerSubmenu && item.footerSubmenu.map((ele, index) => {
+                                return (
+                                  <>                                
+                                      <li key={index} className="item">
+                                        <a className="title" href= {ele.url === "#" || ele.url === "" || ele.url === "/" ? "javascript:void(0)" : ele.url} target={`${ele.url && ele.url.includes("http") ? '_blank' : '_self'}`}> {ele.subMenu}</a>
+                                      </li>
+                                  </>
+                                );
+                              })}
+                          </ul>
+                        </div>
                       </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <ul className="quicklink-item-wrap bottom">
-            {footerNav?.slice(6).map((ele, i) => (
-              <li
-                className="quicklink-item"
-                key={i}
-                onClick={() => handleSubMenus(ele.menuName)}
-              >
-                <div className="mod-quicklink">
-                  <h2
-                    className={`title mb-accord-title ${
-                      subMenuName == ele.menuName && openSubMenu ? "open" : ""
-                    }`}
-                  >
-                    <a href={ele.url}>{ele.menuName}</a>
-                  </h2>
-                  <ul
-                    className={`wrap mb-accord-body ${
-                      subMenuName == ele.menuName && openSubMenu
-                        ? "footer-sub-menu-open"
-                        : ""
-                    }`}
-                  >
-                    {ele.footerSubmenu.map((ele, i) => (
-                      <li className="item" key={i}>
-                        <a href={ele.url} className="link">
-                          {ele.subMenu}
-                        </a>
+                  )
+                })}
+                {items.slice(1).map((item, index)=>{
+                  // console.log("item snehal==================", item)
+                  return(
+                      <li key={index} className="quicklink-item">
+                        <div className="mod-quicklink" onClick={() => handleSubMenus(item.menuName)}>
+                          <h2 className={`title mb-accord-title ${subMenuName === item.menuName && open ? "open" : ""}`}>
+                            <a href= {item.url === "#" || item.url === "" ? "javascript:void(0)" : item.url} target={`${item.url && item.url.includes("http") ? '_blank' : '_self'}`}> {item.menuName}</a>
+                          </h2>
+                          <ul
+                            className={`wrap mb-accord-body ${subMenuName == item.menuName && openSubMenu
+                              ? "footer-sub-menu-open"
+                              : ""}`}
+                          >
+                            {item.footerSubmenu && item.footerSubmenu.map((ele, index) => {
+                                return (
+                                  <>
+                                      <li key={index} className="item">
+                                          <a href={ele.url === "#" || ele.url === "" ? "javascript:void(0)" : ele.url}  target={`${ele.url && ele.url.includes("http") ? '_blank' : '_self'}`} className="link">{ele.subMenu}
+                                          </a>
+                                      </li>
+                                  </>
+                                );
+                              })}
+                          </ul>
+                        </div>
                       </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
-          </ul>
+                  )
+                })}
+              </ul>
+
+              </>
+            )
+          })
+        }
+          { result.slice(1).map((items, index) => {
+            // console.log(result, items, 'newitem')
+            return  (
+              <>
+           
+              <ul className="quicklink-item-wrap">
+                {items.map((item, index)=>{
+                  // console.log("item snehal==================", item)
+                  return(
+                      <li key={index} className="quicklink-item">
+                        <div className="mod-quicklink" onClick={() => handleSubMenus(item.menuName)}>
+                          <h2 className={`title mb-accord-title ${subMenuName === item.menuName && open ? "open" : ""}`}>
+                            <a href= {item.url === "#" || item.url === "" ? "javascript:void(0)" : item.url} target={`${item.url && item.url.includes("http") ? '_blank' : '_self'}`}> {item.menuName}</a>
+                          </h2>
+                          <ul
+                            className={`wrap mb-accord-body ${subMenuName == item.menuName && open ? "footer-sub-menu-open" : ""}`}
+                          >
+                            {item.footerSubmenu && item.footerSubmenu.map((ele, index) => {
+                                return (
+                                  <>
+                                   
+                                      <li key={index} className="item">
+                                          <a href={ele.url === "#" || ele.url === "" ? "javascript:void(0)" : ele.url}  target={`${ele.url && ele.url.includes("http") ? '_blank' : '_self'}`} className="link">{ele.subMenu}</a>
+                                      </li>
+                                  </>
+                                );
+                              })}
+                          </ul>
+                        </div>
+                      </li>
+                  )
+                })}
+              </ul>
+
+              </>
+            )
+          })
+        }
           <div className="copy-wright">
             <div className="mod-social-links">
               {footer?.socialMediaLinks?.map((ele, i) => {
@@ -230,6 +234,15 @@ function Footer({ footer }) {
           <span className="icon icon-file"></span>
         </button>
       </div>
+      <SocialProfileJsonLd
+      type="Organization"
+      name="AMADA MIDDLE EAST FZCO"
+      url="https://www.amada.ae/"
+      sameAs={[
+        `${footer.socialMediaLinks && footer.socialMediaLinks[0]?.url}`,
+        `${footer.socialMediaLinks && footer.socialMediaLinks[1]?.url}`,
+      ]}
+      />
     </div>
   );
 }

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const TraningCourses = () => {
   useEffect(() => {
@@ -41,7 +43,7 @@ const TraningCourses = () => {
                   </li>
                   <li className="item">
                     <Link href="javascript:void(0)">
-                      <a className="link">vocational centre</a>
+                      <a className="link">Technical centre</a>
                     </Link>
                   </li>
                   <li className="item">Training Courses Offered</li>
@@ -525,6 +527,25 @@ const TraningCourses = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+          itemListElements={[
+            {
+              position: 1,
+              name: 'amada',
+              item: `https://www.amada.ae/`,
+            },
+            {
+              position: 2,
+              name: 'Technical centre',
+              item: `https://www.amada.ae/technical-centre/training-courses`,
+            },
+            {
+              position: 3,
+              name: 'Training Courses Offered',
+              item: `https://www.amada.ae/technical-centre/training-courses`,
+            },
+          ]}
+        />
       </Layout>
     </>
   );

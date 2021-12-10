@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 function Breadcrum({ event }) {
   return (
@@ -14,6 +16,20 @@ function Breadcrum({ event }) {
           <li className="item">{event?.bannerTitle}</li>
         </ul>
       </div>
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae`,
+          },
+          {
+            position: 2,
+            name: event?.bannerTitle,
+            item: `https://www.amada.ae/news-events`,
+          },
+        ]}
+      />
     </div>
   );
 }

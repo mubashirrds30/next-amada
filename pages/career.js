@@ -16,6 +16,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import Layout from "../components/Global/Layout";
 import MessageAlert from "../components/Misc/MessageAlert";
 const { REACT_APP_BASE_URL } = process.env;
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 function Career() {
   const [activeSuccess, setActiveSuccess] = useState(false);
@@ -525,6 +527,20 @@ function Career() {
           <MessageAlert activeSuccess={activeSuccess} />;
         </div>
       </Layout>
+      <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'career',
+            item: `https://www.amada.ae/career`,
+          },
+        ]}
+      />
     </>
   );
 }

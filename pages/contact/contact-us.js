@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const Contactus = () => {
   useEffect(() => {
@@ -116,222 +118,7 @@ const Contactus = () => {
               </div>
             </section>
 
-            {/* <section>
-              <div className="bs-section">
-                <div className="container">
-                  <div className="sec-cont">
-                    <div className="bs-add-card">
-                      <ul className="list">
-                        <li className="item">
-                          <div className="mod-add">
-                            <div className="info-wrap">
-                              <h3 className="title">
-                                North Satellite
-                                <span className="cm-line-break">
-                                  Technical Center
-                                </span>
-                              </h3>
-                              <div className="sec-desc">
-                                <p>
-                                  North Satellite Center
-                                  <span className="cm-line-break">
-                                    Faridabad Plot No. 38,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Sector 27A, Mathura Road,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Faridabad – 121 003 (Haryana)
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Ph: <a href="tel:9350679547">9350679547</a>
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="item">
-                          <div className="mod-add">
-                            <div className="info-wrap">
-                              <h3 className="title">Bangalore SC</h3>
-                              <div className="sec-desc">
-                                <p>
-                                  No. 8/13, Ground Floor,
-                                  <span className="cm-line-break">
-                                    G. N. Lakshmikanth Complex,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    1st Cross, 1st Block,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Nandhini Layout,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Bangalore - 560 096.
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Ph:{" "}
-                                    <a href="tel:8023379255">
-                                      080 – 233 792 55
-                                    </a>
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="item">
-                          <div className="mod-add">
-                            <div className="info-wrap">
-                              <h3 className="title">Hyderabad SC</h3>
-                              <div className="sec-desc">
-                                <p>
-                                  No.1-7-96, 2nd Floor,
-                                  <span className="cm-line-break">
-                                    KMR Plaza, Kamala Nagar
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Main Road, CIL Post,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Hyderabad - 500 062.
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Ph: <a href="tel:8886426624">8886426624</a>
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="item">
-                          <div className="mod-add">
-                            <div className="info-wrap">
-                              <h3 className="title">Chennai SC</h3>
-                              <div className="sec-desc">
-                                <p>
-                                  103/1,1st Floor,
-                                  <span className="cm-line-break">
-                                    Poonamalee High Road,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Goparasanallur, Kattupakkam,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Chennai – 600 056.
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Direct:{" "}
-                                    <a href="tel:4426792856">044-26792856</a>
-                                  </span>
-                                  <span className="cm-line-break">
-                                    LM: Above Kovai Pazhamudhir
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Nilayam/next to Baba temple
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="item">
-                          <div className="mod-add">
-                            <div className="info-wrap">
-                              <h3 className="title">Mumbai SC</h3>
-                              <div className="sec-desc">
-                                <p>
-                                  Office No.208, 2nd Floor,
-                                  <span className="cm-line-break">
-                                    Puranik Capitol Puranik City,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Opp-Hypercity, Vadavli
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Ghodbunder Road,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Thane (W) – 400 615
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Tel No:{" "}
-                                    <a href="tel:2225973467">022 25973467</a>
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="item">
-                          <div className="mod-add">
-                            <div className="info-wrap">
-                              <h3 className="title">Pune SC</h3>
-                              <div className="sec-desc">
-                                <p>
-                                  Office No. 405, 4th Floor,
-                                  <span className="cm-line-break">
-                                    TRANSBAY Building.
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Survey No. 3, Balewadi Phata,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Baner, Village Balewadi,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    District Pune – 411 045,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Maharashtra
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Cell.No:
-                                    <a href="tel:7875556334">07875556334</a>
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="item">
-                          <div className="mod-add">
-                            <div className="info-wrap">
-                              <h3 className="title">Vadodara SC</h3>
-                              <div className="sec-desc">
-                                <p>
-                                  Baroda Service Center
-                                  <span className="cm-line-break">
-                                    Plot No.2,Ajitanagar-1,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Beside BRG Heights,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Nr.Amit Nagar Circle,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Sama Savli Road,
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Vadodara - 390 018
-                                  </span>
-                                  <span className="cm-line-break">
-                                    Cell:{" "}
-                                    <a href="tel:8238040120">82380 40120</a>
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section> */}
+           
 
             <section>
               <div className="bs-section">
@@ -357,6 +144,25 @@ const Contactus = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'contact',
+            item: `https://www.amada.ae/contact/contact-us`,
+          },
+          {
+            position: 3,
+            name: 'contact us',
+            item: `https://www.amada.ae/contact/contact-us`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );

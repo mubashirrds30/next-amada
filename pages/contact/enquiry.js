@@ -6,6 +6,8 @@ import MessageAlert from "../../components/Misc/MessageAlert";
 const { REACT_APP_BASE_URL } = process.env;
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const Enquiry = () => {
   const [activeSuccess, setActiveSuccess] = useState(false);
@@ -411,6 +413,25 @@ const Enquiry = () => {
             <MessageAlert activeSuccess={activeSuccess} />;
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'contact us',
+            item: `https://www.amada.ae/contact/enquiry`,
+          },
+          {
+            position: 3,
+            name: '>enquiry',
+            item: `https://www.amada.ae/contact/enquiry`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );

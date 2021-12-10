@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const ServiceSupport = () => {
   useEffect(() => {
@@ -246,6 +248,25 @@ const ServiceSupport = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'services',
+            item: `https://www.amada.ae/services/service-support`,
+          },
+          {
+            position: 3,
+            name: 'service support',
+            item: `https://www.amada.ae/services/service-support`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );
