@@ -140,7 +140,7 @@ const Contact = () => {
                   </li>
                   <li className="item">
                     <a href="#" className="link">
-                      Technical centre
+                      Technical center
                     </a>
                   </li>
                   <li className="item">Contact</li>
@@ -552,7 +552,7 @@ const Contact = () => {
             },
             {
               position: 2,
-              name: 'Technical centre',
+              name: 'Technical Center',
               item: `https://www.amada.ae/technical-center/contact`,
             },
             {

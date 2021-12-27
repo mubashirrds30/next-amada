@@ -23,7 +23,7 @@ const TraningCourses = () => {
           <div className="main lyt-content">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/banner/vc-about-banner.jpg"
+              data-background-image="/assets/images/banner/training.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">
@@ -43,7 +43,7 @@ const TraningCourses = () => {
                   </li>
                   <li className="item">
                     <Link href="javascript:void(0)">
-                      <a className="link">Technical centre</a>
+                      <a className="link">Technical center</a>
                     </Link>
                   </li>
                   <li className="item">Training Courses Offered</li>
@@ -82,7 +82,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/training-2.jpg"
+                                data-src="/assets/images/vc/Traning course - Laser.jpg"
                                 alt="training-2"
                               />
                             </div>
@@ -137,7 +137,7 @@ const TraningCourses = () => {
                                       </td>
                                       <td className="t-desc">4</td>
                                     </tr>
-                                    <tr>
+                                    {/* <tr>
                                       <td className="t-desc">
                                         Laser Operation Training LCG/FO M2 –CO2
                                         series
@@ -154,7 +154,7 @@ const TraningCourses = () => {
                                         </div>
                                       </td>
                                       <td className="t-desc">4</td>
-                                    </tr>
+                                    </tr> */}
                                     <tr>
                                       <td className="t-desc">
                                         Laser cutting know/How Advance Training
@@ -182,7 +182,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/training-2.jpg"
+                                data-src="/assets/images/vc/Traning course - Laser.jpg"
                                 alt="training-2"
                               />
                             </div>
@@ -195,7 +195,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/training-1.jpg"
+                                data-src="/assets/images/vc/Traning course - Bending.jpg"
                                 alt="training-1"
                               />
                             </div>
@@ -232,7 +232,7 @@ const TraningCourses = () => {
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
+                                    {/* <tr>
                                       <td className="t-desc">
                                         Press Brake Operation Training (RGM2
                                         series)
@@ -249,7 +249,7 @@ const TraningCourses = () => {
                                         </div>
                                       </td>
                                       <td className="t-desc">2</td>
-                                    </tr>
+                                    </tr> */}
                                     <tr>
                                       <td className="t-desc">
                                         Press Brake Operation Training ( HM /
@@ -294,7 +294,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/training-1.jpg"
+                                data-src="/assets/images/vc/Traning course - Bending.JPG"
                                 alt="training-1"
                               />
                             </div>
@@ -307,7 +307,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/about.jpg"
+                                data-src="/assets/images/vc/Training course - Software.jpeg"
                                 alt="about"
                               />
                             </div>
@@ -427,7 +427,7 @@ const TraningCourses = () => {
                                       <td className="t-desc">SWDABEBE</td>
                                       <td className="t-desc">2</td>
                                     </tr>
-                                    <tr>
+                                    {/* <tr>
                                       <td className="t-desc">
                                         Software Training SheetWorks for Unfold
                                       </td>
@@ -450,7 +450,7 @@ const TraningCourses = () => {
                                       </td>
                                       <td className="t-desc">SWSHTW-T</td>
                                       <td className="t-desc">4</td>
-                                    </tr>
+                                    </tr> */}
                                     <tr>
                                       <td className="t-desc">
                                         Software Training VPSS 3i PD + Blank
@@ -513,7 +513,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/about.jpg"
+                                data-src="/assets/images/vc/Training course - Software.jpeg"
                                 alt="about"
                               />
                             </div>
@@ -536,13 +536,13 @@ const TraningCourses = () => {
             },
             {
               position: 2,
-              name: 'Technical centre',
-              item: `https://www.amada.ae/technical-centre/training-courses`,
+              name: 'Technical center',
+              item: `https://www.amada.ae/technical-center/training-courses`,
             },
             {
               position: 3,
               name: 'Training Courses Offered',
-              item: `https://www.amada.ae/technical-centre/training-courses`,
+              item: `https://www.amada.ae/technical-center/training-courses`,
             },
           ]}
         />

@@ -25,7 +25,7 @@ const SEW = () => {
           <div className="main lyt-content">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/banner/service-banner.jpg"
+              data-background-image="/assets/images/banner/Traning course - Bending.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">

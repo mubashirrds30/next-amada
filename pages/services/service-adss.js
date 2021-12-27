@@ -24,7 +24,7 @@ const ServiceAdss = () => {
           <div className="main lyt-content js-bg">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/banner/service-banner.jpg"
+              data-background-image="/assets/images/banner/Traning course - Bending.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">Service ADSS</h2>

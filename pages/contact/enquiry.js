@@ -105,7 +105,7 @@ const Enquiry = () => {
           <div className="main lyt-content js-bg">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/csr-banner.jpg"
+              data-background-image="/assets/images/company banner.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">contact us</h2>

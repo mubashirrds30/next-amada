@@ -25,8 +25,8 @@ function Introduction() {
           <div className="main lyt-content js-bg">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/banner/company-profile-banner.jpg"
-            >
+              // data-background-image="/assets/images/banner/company-profile-banner.jpg"
+              data-background-image="/assets/images/banner/company banner.jpg">
               <div className="banner-title-wrap">
                 <h2 className="banner-title">
                   company <span className="cm-line-break">overview</span>
@@ -62,7 +62,8 @@ function Introduction() {
                               <figure className="mod-figure">
                                 <img
                                   className="lozad"
-                                  data-src="/assets/images/amada-india-m.jpg"
+                                  // data-src="/assets/images/amada-india-m.jpg"
+                                  data-src="/assets/images/本社棟全景.JPG"
                                   alt="amada-india-m"
                                 />
                                 <figcaption className="sub-title">
@@ -106,7 +107,8 @@ function Introduction() {
                               <figure className="mod-figure">
                                 <img
                                   className="lozad"
-                                  data-src="/assets/images/amada-india-m.jpg"
+                                  // data-src="/assets/images/amada-india-m.jpg"
+                                  data-src="/assets/images/本社棟全景.JPG"
                                   alt="amada-india-m"
                                 />
                                 <figcaption className="sub-title">
