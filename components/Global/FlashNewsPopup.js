@@ -16,10 +16,10 @@ const FlashNewsPopup = ({ flashNewsList }) => {
               return (
                 <li key={index} className="item">
                   <SingleFlashNews
-                    date={news.date}
-                    monthYear={news.monthYear}
-                    flashNewsDetail={news.flashNewsDetail}
-                    url={news.url}
+                    date={news?.date}
+                    monthYear={news?.monthYear}
+                    flashNewsDetail={news?.flashNewsDetail}
+                    url={news?.url}
                   />
                   ;
                 </li>

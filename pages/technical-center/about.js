@@ -5,8 +5,28 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
+import { BreadcrumbJsonLd } from 'next-seo';
+import Gallery from "../../components/News/Gallery";
 
-const About = () => {
+
+
+export async function getServerSideProps() {
+  const res = await fetch(
+    `${process.env.REACT_APP_BASE_URL}/technical-center`
+  );
+  const json = await res.json();
+
+  return {
+    props: {
+      gallery: json,
+    },
+  };
+}
+
+
+const About = ({gallery}) => {
+console.log('gallery', gallery);
+
   useEffect(() => {
     const { observe } = lozad();
     observe();
@@ -26,7 +46,7 @@ const About = () => {
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">
-                  Vocational Center<span className="cm-line-break">About</span>
+                  Technical Center<span className="cm-line-break">About</span>
                 </h2>
               </div>
               <span className="corner-shape"></span>
@@ -61,32 +81,13 @@ const About = () => {
                               <img
                                 className="lozad"
                                 data-src="/assets/images/vocational-m.jpg"
-                                alt="vocational-m"
+                                alt="technical-m"
                               />
                             </div>
                             <div className="sec-desc">
-                              <p>
-                                Since the foundation of the company, AMADA has
-                                operated according to the motto of
-                                &quot;creativity&quot;, incorporating it into
-                                all of its products.
-                              </p>
-                              <p>
-                                With 70 years of experience in the development
-                                of metal working machinery, Amada is confident
-                                that it will continuously maintain a spirit of
-                                originality, guided with a viewpoint of the end
-                                user.
-                              </p>
-                              <p>
-                                AMADA MIDDLE EAST FZCO, with its office in
-                                Dubai, United Arab Emirates and this is a
-                                subsidiary of Amada Co. Ltd providing Sales and
-                                after sales services to the customers in Gulf
-                                and Middle East countries such as United Arab
-                                Emirates, Kingdom of Saudi Arabia, Kuwait, Oman,
-                                Bahrain, Jordan, Lebanon and Qatar.
-                              </p>
+                            <p>With our Management Philosophy “Grow with our Customers”, The AMADA Technical Center is opened for customers to provide hands-on access to AMADA’s engineering and technical expertise by showcasing leading-edge technologies, production-enhancing software, precision tooling and the latest generation of AMADA equipment. Representing the most recent addition to AMADA’s growing network of customer-centered sites, the Technical Center provides the ideal setting for training, technical seminars, machine demonstrations and verification process. Regular in-house exhibitions and events take place here, where technical know-how is shared and the latest machine innovations are demonstrated in live operation</p>
+                            <p>The overall concept of the Technical Center is to consistently and optimally support AMADA customers in being innovative, competitive and efficient today and in the future. The focus is, in addition to the exhibition of technologies, a solution-spanning offer of analysis and consulting. In the Technical Center, each customer is individually and comprehensively informed about the latest developments in sheet metal processing.</p>
+                            <p>The AMADA Technical Center is also committed to work with customers and their employees in the Sheet Metal Industry with a view of imparting knowledge to the operators related to Safety, Machine Operation and Maintenance to make them completely competent. In order to overcome the shortage of skilled workers, we want to work together with our customers and their employees and give them the ability to constantly live up to the ever-greater technical requirements in the field of Sheet Metal Industry.</p> 
                             </div>
                           </div>
                           <div className="right-side">
@@ -94,13 +95,13 @@ const About = () => {
                               <img
                                 className="lozad"
                                 data-src="/assets/images/vocational-m.jpg"
-                                alt="vocational-m"
+                                alt="technical-m"
                               />
                             </div>
                           </div>
                         </div>
                       </li>
-                      <li className="item">
+                      {/* <li className="item">
                         <div className="bs-img-desc">
                           <div className="left-side">
                             <h2 className="title">Customer Details</h2>
@@ -151,14 +152,35 @@ const About = () => {
                             </div>
                           </div>
                         </div>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
+              <Gallery news={gallery} />
               </div>
+
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+          itemListElements={[
+            {
+              position: 1,
+              name: 'amada',
+              item: `https://www.amada.ae/`,
+            },
+            {
+              position: 2,
+              name: 'Technical Center',
+              item: `https://www.amada.ae/technical-center/about`,
+            },
+            {
+              position: 3,
+              name: 'About',
+              item: `https://www.amada.ae/technical-center/about`,
+            },
+          ]}
+        />
       </Layout>
     </>
   );

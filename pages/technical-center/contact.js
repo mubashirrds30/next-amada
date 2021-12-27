@@ -12,11 +12,13 @@ import Layout from "../../components/Global/Layout";
 import addDays from "date-fns/addDays";
 import subDays from "date-fns/subDays";
 import moment from "moment";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const Contact = () => {
   const [activeSuccess, setActiveSuccess] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
-  console.log(startDate);
+  // console.log(startDate);
 
   useEffect(() => {
     const { observe } = lozad();
@@ -138,7 +140,7 @@ const Contact = () => {
                   </li>
                   <li className="item">
                     <a href="#" className="link">
-                      Technical centre
+                      Technical center
                     </a>
                   </li>
                   <li className="item">Contact</li>
@@ -541,6 +543,25 @@ const Contact = () => {
             <MessageAlert activeSuccess={activeSuccess} />;
           </div>
         </main>
+        <BreadcrumbJsonLd
+          itemListElements={[
+            {
+              position: 1,
+              name: 'amada',
+              item: `https://www.amada.ae/`,
+            },
+            {
+              position: 2,
+              name: 'Technical Center',
+              item: `https://www.amada.ae/technical-center/contact`,
+            },
+            {
+              position: 3,
+              name: 'Contact',
+              item: `https://www.amada.ae/technical-center/contact`,
+            },
+          ]}
+        />
       </Layout>
     </>
   );

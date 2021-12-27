@@ -5,6 +5,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const ServiceAdss = () => {
   useEffect(() => {
@@ -22,7 +24,7 @@ const ServiceAdss = () => {
           <div className="main lyt-content js-bg">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/banner/service-banner.jpg"
+              data-background-image="/assets/images/banner/Traning course - Bending.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">Service ADSS</h2>
@@ -198,6 +200,25 @@ const ServiceAdss = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'services',
+            item: `https://www.amada.ae/services/service-adss`,
+          },
+          {
+            position: 3,
+            name: 'service adds',
+            item: `https://www.amada.ae/services/service-adss`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const ServiceSupport = () => {
   useEffect(() => {
@@ -22,7 +24,7 @@ const ServiceSupport = () => {
           <div className="main lyt-content js-bg">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/banner/service-banner.jpg"
+              data-background-image="/assets/images/banner/Traning course - Bending.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">Service Support</h2>
@@ -63,7 +65,7 @@ const ServiceSupport = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/services/service-engg-support.jpg"
+                                data-src="/assets/images/services/service 1.jpg"
                                 alt="service-engg-support"
                               />
                             </div>
@@ -84,7 +86,7 @@ const ServiceSupport = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/services/service-engg-support.jpg"
+                                data-src="/assets/images/services/service 1.jpg"
                                 alt="service-engg-support"
                               />
                             </div>
@@ -98,7 +100,7 @@ const ServiceSupport = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/services/service-operation-support.jpg"
+                                data-src="/assets/images/services/service 2.jpg"
                                 alt="service-operation-support"
                               />
                             </div>
@@ -118,7 +120,7 @@ const ServiceSupport = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/services/service-operation-support.jpg"
+                                data-src="/assets/images/services/service 2.jpg"
                                 alt="service-operation-support"
                               />
                             </div>
@@ -132,7 +134,7 @@ const ServiceSupport = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/services/service-machine-support.jpg"
+                                data-src="/assets/images/services/service 3.jpg"
                                 alt="service-machine-support"
                               />
                             </div>
@@ -152,7 +154,7 @@ const ServiceSupport = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/services/service-machine-support.jpg"
+                                data-src="/assets/images/services/service 3.jpg"
                                 alt="service-machine-support"
                               />
                             </div>
@@ -246,6 +248,25 @@ const ServiceSupport = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'services',
+            item: `https://www.amada.ae/services/service-support`,
+          },
+          {
+            position: 3,
+            name: 'service support',
+            item: `https://www.amada.ae/services/service-support`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );

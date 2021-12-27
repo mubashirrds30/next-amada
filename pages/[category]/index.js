@@ -8,6 +8,8 @@ import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
+import { ProductJsonLd } from 'next-seo';
+
 
 export const getServerSideProps = async (context) => {
   const id = context.params.category;
@@ -16,9 +18,15 @@ export const getServerSideProps = async (context) => {
   );
   const json = await res.json();
 
-  return {
-    props: { data: json, slug: id },
-  };
+  if(json.length > 0){
+    return {
+      props: { data: json, slug: id },
+    }
+  }else{
+    return {
+      notFound : true
+    }
+  }
 };
 
 function Category({ data, slug }) {
@@ -28,15 +36,15 @@ function Category({ data, slug }) {
   }, []);
   const nextRouter = useRouter();
 
-  if (data.length > 0) {
-  } else {
-    if (nextRouter != undefined) {
-      typeof window !== "undefined" && nextRouter.push("/404");
-    }
-    return false;
-  }
+  // if (data.length > 0) {
+  // } else {
+  //   if (nextRouter != undefined) {
+  //     typeof window !== "undefined" && nextRouter.push("/404");
+  //   }
+  //   return false;
+  // }
   const product = data[0];
-
+// console.log(product, 'product');
   return (
     <>
       <main>
@@ -60,7 +68,31 @@ function Category({ data, slug }) {
             />
           )}
         </Layout>
+        {product.productSection?.products?.map((ele, i)=>{
+          return(
+            <>
+                <ProductJsonLd
+                keyOverride={i}
+                productName={ele.name}
+                images={[
+                  `${process.env.REACT_APP_BASE_URL}${ele.smallImage.url}`
+                ]}
+                description={ele.description}
+                brand="Amada"
+                manufacturerName="AMADA MIDDLE EAST FZCO"
+                manufacturerLogo="https://www.amada.ae/assets/images/logo.png"
+                releaseDate={ele.published_at}
+                offers={[
+                  {
+                    priceCurrency: 'INR',
+                    url: `https://www.amada.ae/${slug}/${ele.slug}`,
+                  },]}
+              />
+            </>
+          )
+        })}
       </main>
+      
     </>
   );
 }

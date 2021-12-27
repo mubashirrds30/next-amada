@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/Global/Layout";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const CorporateVideo = () => {
   return (
@@ -44,11 +46,11 @@ const CorporateVideo = () => {
                         data-poster="assets/images/poster-image.jpg"
                       >
                         <source
-                          src="/assets/video/video.mp4"
+                          src="/assets/video/amada middle east (2).mp4"
                           type="video/mp4"
                         />
                         <source
-                          src="/assets/video/video.ogg"
+                          src="/assets/video/amada middle east (2).ogg"
                           type="video/ogg"
                         />
                       </video>
@@ -59,6 +61,25 @@ const CorporateVideo = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'company profile',
+            item: `https://www.amada.ae/company-profile/introduction`,
+          },
+          {
+            position: 3,
+            name: 'corporate video',
+            item: `https://www.amada.ae/company-profile/corporate-video`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );

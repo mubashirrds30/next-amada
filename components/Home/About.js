@@ -10,7 +10,7 @@ function About({ info }) {
     const { observe } = lozad();
     observe();
   }, []);
-  console.log(info);
+  // console.log(info);
   return (
     <section>
       <div className="bs-section">

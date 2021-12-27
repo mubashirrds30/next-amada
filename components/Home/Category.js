@@ -3,12 +3,16 @@ import lozad from "lozad";
 import Link from "next/link";
 import React, { useEffect } from "react";
 const { REACT_APP_BASE_URL } = process.env;
+import { ProductJsonLd } from 'next-seo';
+
 
 function Category({ category }) {
   useEffect(() => {
     const { observe } = lozad();
     observe();
   }, []);
+
+  // console.log(category, 'catttt')
 
   return (
     <div className="bs-section sec-first">
@@ -49,6 +53,28 @@ function Category({ category }) {
           </div>
         </div>
       </div>
+      {category?.product_categories?.map((ele, i)=>{
+          return(
+            <>
+                <ProductJsonLd
+                keyOverride={i}
+                productName={ele.title}
+                images={[
+                  `${REACT_APP_BASE_URL}${ele.smallImage.url}`
+                ]}
+                brand="Amada"
+                manufacturerName="Amada"
+                manufacturerLogo="https://www.amada.ae/assets/images/logo.png"
+                releaseDate={ele.published_at}
+                offers={[
+                  {
+                    priceCurrency: 'INR',
+                    url: `https://www.amada.ae/${ele.slug}`,
+                  },]}
+              />
+            </>
+          )
+        })}
     </div>
   );
 }

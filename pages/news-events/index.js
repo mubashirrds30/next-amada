@@ -6,6 +6,8 @@ import NewsCards from "../../components/News Listing/NewsCards";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
+import { NewsArticleJsonLd } from 'next-seo';
+
 
 export async function getServerSideProps() {
   const res = await fetch(
@@ -21,6 +23,8 @@ export async function getServerSideProps() {
 }
 
 function NewsEvents({ event }) {
+  // console.log(event, 'news')
+
   return (
     <>
       {event.seo !== null && (
@@ -41,9 +45,30 @@ function NewsEvents({ event }) {
           <div className="main lyt-content js-bg">
             <Banner event={event} />
             <Breadcrum event={event} />
-            <NewsCards event={event} />
+            {event.newsSection.news_events.length > 0 && event.newsSection.isActive ? <NewsCards event={event} /> : <div className="mod-greeting"><h1 className="title">Coming soon</h1></div>}
           </div>
         </main>
+        {event?.newsSection?.news_events?.map((ele, i)=>{
+          return (
+            <>
+            <NewsArticleJsonLd
+              keyOverride={i}
+              url={`https://www.amada.ae/news-events`}
+              title={ele.title}
+              images={[
+                `${process.env.REACT_APP_BASE_URL}${ele.smallImage.url}`
+              ]}
+              section="technology"
+              datePublished={ele.published_at}
+              dateModified={ele.updated_at}
+              authorName="Amada"
+              publisherName="Amada Bureau"
+              publisherLogo="https://www.amada.ae/assets/images/logo.png"
+              body={ele.subtitle}
+            />
+            </>
+          )
+         })}
       </Layout>
     </>
   );

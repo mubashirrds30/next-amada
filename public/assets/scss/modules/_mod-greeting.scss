@@ -1,0 +1,17 @@
+.mod-greeting {
+    .title {
+        font-size: 4rem;
+        font-weight: $font-black;
+        line-height: 6.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 15rem 0;
+        color: $clr-primary;
+
+        @media screen and (max-width: $xs) {
+            font-size: 2rem;
+            line-height: 3.2rem;
+            padding: 12.5rem 0;
+        }
+    }
+}

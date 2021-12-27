@@ -8,7 +8,7 @@ const ErrorPage = () => {
   return (
     <>
       <Head>
-        <link rel="icon" href="./static/favicon.ico" />
+        <link rel="icon" href="../static/favicon.ico" />
       </Head>
       <Layout activeLink={"404"}>
         <main>
@@ -17,7 +17,7 @@ const ErrorPage = () => {
               <div className="content-wrap">
                 <div className="icon-wrap">
                   <img
-                    src="assets/images/404.svg"
+                    src="../assets/images/404.svg"
                     alt="Error 404 Image"
                     title="Error 404 Image"
                   />

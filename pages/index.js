@@ -22,18 +22,17 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ banner, category, event, seo, info }) {
-  console.log(info, "info");
   return (
     <>
       <Layout activeLink={"Home"}>
         <Head>
-          <title>Amada India</title>
+          <title>AMADA MIDDLE EAST FZCO</title>
           <link rel="icon" href="../static/favicon.ico" />
         </Head>
         <Banner banner={banner} />
         {category.isActive && <Category category={category} />}
         {info.isActive && <About info={info} />}
-        {event.isActive && <News event={event} />}
+        {event.isActive && event.news_events.length > 0 && <News event={event} />}
       </Layout>
       {seo !== null && (
         <NextSeo

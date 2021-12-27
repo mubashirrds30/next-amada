@@ -3,6 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
+import { BreadcrumbJsonLd } from 'next-seo';
+
 
 const CustomerDetails = () => {
   useEffect(() => {
@@ -22,7 +24,8 @@ const CustomerDetails = () => {
           <div className="main lyt-content js-bg">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/csr-banner.jpg"
+              // data-background-image="/assets/images/csr-banner.jpg"
+              data-background-image="/assets/images/banner/company banner.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">
@@ -298,6 +301,25 @@ const CustomerDetails = () => {
             </section>
           </div>
         </main>
+        <BreadcrumbJsonLd
+        itemListElements={[
+          {
+            position: 1,
+            name: 'amada',
+            item: `https://www.amada.ae/`,
+          },
+          {
+            position: 2,
+            name: 'company profile',
+            item: `https://www.amada.ae/company-profile/customer-details`,
+          },
+          {
+            position: 3,
+            name: 'customer details',
+            item: `https://www.amada.ae/company-profile/customer-details`,
+          },
+        ]}
+      />
       </Layout>
     </>
   );
