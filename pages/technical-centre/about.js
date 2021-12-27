@@ -25,7 +25,7 @@ export async function getServerSideProps() {
 
 
 const About = ({gallery}) => {
-console.log('gallery', gallery);
+// console.log('gallery', gallery);
 
   useEffect(() => {
     const { observe } = lozad();
