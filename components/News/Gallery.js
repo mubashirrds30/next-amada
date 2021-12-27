@@ -22,7 +22,7 @@ import "swiper/css/navigation";
 import lozad from "lozad";
 
 function Gallery({ news }) {
-  console.log(news)
+  // console.log(news)
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   useEffect(() => {
