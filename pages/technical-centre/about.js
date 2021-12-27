@@ -6,9 +6,27 @@ import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
 import Head from "next/head";
 import { BreadcrumbJsonLd } from 'next-seo';
+import Gallery from "../../components/News/Gallery";
 
 
-const About = () => {
+
+export async function getServerSideProps() {
+  const res = await fetch(
+    `${process.env.REACT_APP_BASE_URL}/technical-center`
+  );
+  const json = await res.json();
+
+  return {
+    props: {
+      gallery: json,
+    },
+  };
+}
+
+
+const About = ({gallery}) => {
+// console.log('gallery', gallery);
+
   useEffect(() => {
     const { observe } = lozad();
     observe();
@@ -28,7 +46,7 @@ const About = () => {
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">
-                  Vocational Center<span className="cm-line-break">About</span>
+                  Technical Center<span className="cm-line-break">About</span>
                 </h2>
               </div>
               <span className="corner-shape"></span>
@@ -63,7 +81,7 @@ const About = () => {
                               <img
                                 className="lozad"
                                 data-src="/assets/images/vocational-m.jpg"
-                                alt="vocational-m"
+                                alt="technical-m"
                               />
                             </div>
                             <div className="sec-desc">
@@ -77,7 +95,7 @@ const About = () => {
                               <img
                                 className="lozad"
                                 data-src="/assets/images/vocational-m.jpg"
-                                alt="vocational-m"
+                                alt="technical-m"
                               />
                             </div>
                           </div>
@@ -138,7 +156,9 @@ const About = () => {
                     </ul>
                   </div>
                 </div>
+              <Gallery news={gallery} />
               </div>
+
             </section>
           </div>
         </main>
@@ -151,13 +171,13 @@ const About = () => {
             },
             {
               position: 2,
-              name: 'Technical Centre',
-              item: `https://www.amada.ae/technical-centre/about`,
+              name: 'Technical Center',
+              item: `https://www.amada.ae/technical-center/about`,
             },
             {
               position: 3,
               name: 'About',
-              item: `https://www.amada.ae/technical-centre/about`,
+              item: `https://www.amada.ae/technical-center/about`,
             },
           ]}
         />
