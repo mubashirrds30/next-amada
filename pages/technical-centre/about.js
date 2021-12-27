@@ -61,7 +61,7 @@ console.log('gallery', gallery);
                   </li>
                   <li className="item">
                     <a href="#" className="link">
-                      Technical Center
+                      Technical Centre
                     </a>
                   </li>
                   <li className="item">About</li>
