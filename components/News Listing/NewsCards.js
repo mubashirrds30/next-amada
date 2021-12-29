@@ -36,7 +36,6 @@ function NewsCards({ event }) {
                               >
                                 <Link href={ele.url}>
                                   <a
-                                    href="https://www.linkedin.com/feed/update/urn:li:activity:6831534483821473792"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="news-link"
