@@ -7,6 +7,7 @@ import Gallery from "../../../components/News/Gallery";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 import { NewsArticleJsonLd } from 'next-seo';
+import Button from "../../../components/News/Button";
 
 
 export const getServerSideProps = async (context) => {
@@ -51,6 +52,7 @@ function NewsDetail(data) {
         <div className="main lyt-content js-bg">
           <Banner news={news} />
           <Breadcrum news={news} />
+          {news.pdfFile && news.pdfFile.url && <Button news={news}/>}
           <Gallery news={news} />
         </div>
       </Layout>

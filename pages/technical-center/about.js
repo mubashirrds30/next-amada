@@ -42,7 +42,7 @@ const About = ({gallery}) => {
           <div className="main lyt-content">
             <div
               className="bs-banner typ-sm lozad-background lozad"
-              data-background-image="/assets/images/banner/vc-banner.jpg"
+              data-background-image="/assets/images/banner/training.jpg"
             >
               <div className="banner-title-wrap">
                 <h2 className="banner-title">
@@ -80,7 +80,7 @@ const About = ({gallery}) => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vocational-m.jpg"
+                                data-src="/assets/images/amada training.jpg"
                                 alt="technical-m"
                               />
                             </div>
@@ -94,7 +94,7 @@ const About = ({gallery}) => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vocational-m.jpg"
+                                data-src="/assets/images/amada training.jpg"
                                 alt="technical-m"
                               />
                             </div>
