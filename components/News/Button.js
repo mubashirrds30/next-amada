@@ -3,7 +3,7 @@ const { REACT_APP_BASE_URL } = process.env;
 
 
 function Button({news}) {
-    console.log(news)
+    
     return (
         // <div className="bs-section">
             <div style={{marginTop: '25px'}} className="container">
