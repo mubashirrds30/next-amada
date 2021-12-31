@@ -158,8 +158,7 @@ function Career() {
                           </div>
                           <div className="sec-desc">
                             <p>
-                              AMADA MIDDLE EAST FZCO is a wholly owned
-                              subsidiary of Amada Co. Ltd. Japan. We are one of
+                              AMADA MIDDLE EAST FZCO is a subsidiary of Amada Group. We are one of
                               the leading supplier of metal working machinery in
                               UAE.
                             </p>

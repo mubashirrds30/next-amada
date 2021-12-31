@@ -197,6 +197,7 @@ const ServiceAdss = () => {
                   </div>
                 </div>
               </div>
+                    <p style={{textAlign:'center', paddingBottom:'15px', color:'rgba(211, 28, 46, 0.8)'}}>*ADSS service can be provided as per the requirement and/or regulations of each country.</p>
             </section>
           </div>
         </main>
