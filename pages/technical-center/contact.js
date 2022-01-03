@@ -159,7 +159,7 @@ const Contact = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                src="/assets/images/amada-india-m.jpg"
+                                src="/assets/images/contact/contact1.jpg"
                                 alt="amada-india-m"
                               />
                             </div>
@@ -203,7 +203,7 @@ const Contact = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                src="/assets/images/amada-india-m.jpg"
+                                src="/assets/images/contact/contact1.jpg"
                                 alt="amada-india-m"
                               />
                             </div>

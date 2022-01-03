@@ -48,6 +48,10 @@
   &.typ-mega-menu {
     .menu-wrap {
       width: 75rem;
+      @media screen and (min-width: $xs) {
+        max-height: 56rem;
+        overflow-y: auto;
+      }
     }
     .quicklink-item-wrap {
       margin: 0 -1rem;
