@@ -294,7 +294,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/Traning course - Bending.JPG"
+                                data-src="/assets/images/vc/Traning course - Bending.jpg"
                                 alt="training-1"
                               />
                             </div>

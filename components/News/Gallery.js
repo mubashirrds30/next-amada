@@ -15,7 +15,7 @@ import SwiperCore, {
   SpaceBetween,
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Navigation, Thumbs, Pagination, SpaceBetween]);
+SwiperCore.use([Navigation, Thumbs, Pagination]);
 const { REACT_APP_BASE_URL } = process.env;
 
 import "swiper/css/navigation";

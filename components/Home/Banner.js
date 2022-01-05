@@ -7,7 +7,6 @@ import SwiperCore, {
   EffectFade,
   Pagination,
 } from "swiper";
-
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import lozad from "lozad";
