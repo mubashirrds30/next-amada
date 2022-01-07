@@ -4,6 +4,8 @@ import addDays from "date-fns/addDays";
 import subDays from "date-fns/subDays";
 import { useFormik } from "formik";
 import lozad from "lozad";
+import Head from "next/head";
+
 import moment from "moment";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
@@ -119,6 +121,22 @@ function Career() {
   return (
     <>
       <Layout activeLink={"Career"}>
+      <Head>
+          <title>CAREER</title>
+          <link rel="icon" href="../static/favicon.ico" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
+          <script
+          dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-NQ7F7XCH9J');
+          `,
+            }}
+          />
+        </Head>
         <div className="main lyt-content js-bg">
           <div
             className="bs-banner typ-sm lozad-background lozad"

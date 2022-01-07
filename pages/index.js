@@ -28,6 +28,18 @@ export default function Home({ banner, category, event, seo, info }) {
         <Head>
           <title>AMADA MIDDLE EAST FZCO</title>
           <link rel="icon" href="../static/favicon.ico" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
+          <script
+          dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-NQ7F7XCH9J');
+          `,
+            }}
+          />
         </Head>
         <Banner banner={banner} />
         {category.isActive && <Category category={category} />}

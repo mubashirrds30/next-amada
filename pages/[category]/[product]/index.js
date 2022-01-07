@@ -45,6 +45,18 @@ function Product({ data }) {
       <Head>
         <title>{product.name}</title>
         <link rel="icon" href="../static/favicon.ico" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
+          <script
+          dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-NQ7F7XCH9J');
+          `,
+            }}
+         />
       </Head>
       <Layout activeLink={"Products"}>
         <main>
