@@ -1,13 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import lozad from "lozad";
-import { NextSeo } from "next-seo";
+import { NextSeo, ProductJsonLd } from "next-seo";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import Layout from "../../../components/Global/Layout";
 import ProductBreadcrum from "../../../components/Product/ProductBreadcrum";
 import ProductInfo from "../../../components/Product/ProductInfo";
-import Head from "next/head";
-import { ProductJsonLd } from 'next-seo';
 
 
 export const getServerSideProps = async (context) => {
@@ -45,18 +44,6 @@ function Product({ data }) {
       <Head>
         <title>{product.name}</title>
         <link rel="icon" href="../static/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-         />
       </Head>
       <Layout activeLink={"Products"}>
         <main>

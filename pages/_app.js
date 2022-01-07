@@ -1,7 +1,6 @@
+import Head from "next/head";
 import "../public/assets/css/bootstrap.min.css";
 import "../public/assets/scss/custom.scss";
-import Layout from "../components/Global/Layout";
-import Head from "next/head";
 const { NEXT_PUBLIC_GOOGLE_ANALYTICS } = process.env;
 
 function MyApp({ Component, pageProps }) {

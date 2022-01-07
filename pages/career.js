@@ -4,21 +4,18 @@ import addDays from "date-fns/addDays";
 import subDays from "date-fns/subDays";
 import { useFormik } from "formik";
 import lozad from "lozad";
-import Head from "next/head";
-
 import moment from "moment";
-import { NextSeo } from "next-seo";
+import { BreadcrumbJsonLd } from "next-seo";
+import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import {
-  default as getDay,
-  default as ReactDatePicker,
+  default as ReactDatePicker
 } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Layout from "../components/Global/Layout";
 import MessageAlert from "../components/Misc/MessageAlert";
 const { REACT_APP_BASE_URL } = process.env;
-import { BreadcrumbJsonLd } from 'next-seo';
 
 
 function Career() {
@@ -121,21 +118,9 @@ function Career() {
   return (
     <>
       <Layout activeLink={"Career"}>
-      <Head>
+        <Head>
           <title>CAREER</title>
           <link rel="icon" href="../static/favicon.ico" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-          />
         </Head>
         <div className="main lyt-content js-bg">
           <div
@@ -225,11 +210,10 @@ function Career() {
                         <ul className="row">
                           <li className="col-md-6 col-xs-12">
                             <div
-                              className={`${
-                                formik.touched.name && formik.errors.name
+                              className={`${formik.touched.name && formik.errors.name
                                   ? "form-group error"
                                   : "form-group"
-                              }`}
+                                }`}
                             >
                               <label className="field-label typ-req">
                                 Name
@@ -252,11 +236,10 @@ function Career() {
                           </li>
                           <li className="col-md-6 col-xs-12">
                             <div
-                              className={`${
-                                formik.touched.email && formik.errors.email
+                              className={`${formik.touched.email && formik.errors.email
                                   ? "form-group error"
                                   : "form-group"
-                              }`}
+                                }`}
                             >
                               <label className="field-label typ-req">
                                 Email
@@ -352,11 +335,10 @@ function Career() {
                         <ul className="row">
                           <li className="col-md-12 col-xs-12">
                             <div
-                              className={`${
-                                formik.touched.address && formik.errors.address
+                              className={`${formik.touched.address && formik.errors.address
                                   ? "form-group error"
                                   : "form-group"
-                              }`}
+                                }`}
                             >
                               <label className="field-label typ-req">
                                 Address
@@ -372,7 +354,7 @@ function Career() {
                                 onChange={formik.handleChange}
                               >
                                 {formik.touched.address &&
-                                formik.errors.address ? (
+                                  formik.errors.address ? (
                                   <p className="error-text">
                                     {formik.errors.address}
                                   </p>
@@ -384,11 +366,10 @@ function Career() {
                         <ul className="row">
                           <li className="col-md-6 col-xs-12">
                             <div
-                              className={`${
-                                formik.touched.city && formik.errors.city
+                              className={`${formik.touched.city && formik.errors.city
                                   ? "form-group error"
                                   : "form-group"
-                              }`}
+                                }`}
                             >
                               <label className="field-label typ-req">
                                 City
@@ -429,12 +410,11 @@ function Career() {
                         <ul className="row">
                           <li className="col-md-6 col-xs-12">
                             <div
-                              className={`${
-                                formik.touched.phoneNumber &&
-                                formik.errors.phoneNumber
+                              className={`${formik.touched.phoneNumber &&
+                                  formik.errors.phoneNumber
                                   ? "form-group error"
                                   : "form-group"
-                              }`}
+                                }`}
                             >
                               <label className="field-label typ-req">
                                 Phone Number
@@ -449,7 +429,7 @@ function Career() {
                                 onChange={formik.handleChange}
                               />
                               {formik.touched.phoneNumber &&
-                              formik.errors.phoneNumber ? (
+                                formik.errors.phoneNumber ? (
                                 <p className="error-text">
                                   {formik.errors.phoneNumber}
                                 </p>
@@ -476,12 +456,11 @@ function Career() {
                         <ul className="row">
                           <li className="col-md-12 col-xs-12">
                             <div
-                              className={`${
-                                formik.touched.educationDetails &&
-                                formik.errors.educationDetails
+                              className={`${formik.touched.educationDetails &&
+                                  formik.errors.educationDetails
                                   ? "form-group error"
                                   : "form-group"
-                              }`}
+                                }`}
                             >
                               <label className="field-label">
                                 Educational Details
@@ -497,7 +476,7 @@ function Career() {
                                 onChange={formik.handleChange}
                               ></textarea>
                               {formik.touched.educationDetails &&
-                              formik.errors.educationDetails ? (
+                                formik.errors.educationDetails ? (
                                 <p className="error-text">
                                   {formik.errors.educationDetails}
                                 </p>

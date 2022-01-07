@@ -1,14 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import lozad from "lozad";
+import { NextSeo, ProductJsonLd } from "next-seo";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
+import Layout from "../../components/Global/Layout";
 import Banner from "../../components/Product Listing/Banner";
 import Breadcrum from "../../components/Product Listing/Breadcrum";
 import Products from "../../components/Product Listing/Products";
-import { NextSeo } from "next-seo";
-import { useRouter } from "next/router";
-import Layout from "../../components/Global/Layout";
-import Head from "next/head";
-import { ProductJsonLd } from 'next-seo';
 
 
 export const getServerSideProps = async (context) => {
@@ -44,25 +43,13 @@ function Category({ data, slug }) {
   //   return false;
   // }
   const product = data[0];
-// console.log(product, 'product');
+
   return (
     <>
       <main>
         <Head>
           <title>{product.title}</title>
           <link rel="icon" href="../static/favicon.ico" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-            />
         </Head>
         <Layout activeLink={"Products"}>
           <div className="main lyt-content js-bg">

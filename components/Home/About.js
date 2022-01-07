@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import lozad from "lozad";
-import React, { useEffect } from "react";
-const { REACT_APP_BASE_URL } = process.env;
 import Link from "next/link";
+import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+const { REACT_APP_BASE_URL } = process.env;
 
 function About({ info }) {
   useEffect(() => {

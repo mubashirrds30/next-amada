@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import lozad from "lozad";
-const { REACT_APP_BASE_URL } = process.env;
 import { SocialProfileJsonLd } from 'next-seo';
+import React, { useEffect, useState } from "react";
+const { REACT_APP_BASE_URL } = process.env;
 
 
 function Footer({ footer }) {

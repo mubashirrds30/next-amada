@@ -1,13 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import Link from "next/link";
-import Layout from "../components/Global/Layout";
 import Head from "next/head";
+import Link from "next/link";
+import React from "react";
+import Layout from "../components/Global/Layout";
 
 const ErrorPage = () => {
   return (
     <>
       <Head>
+        <title>Error 404</title>
         <link rel="icon" href="../static/favicon.ico" />
       </Head>
       <Layout activeLink={"404"}>

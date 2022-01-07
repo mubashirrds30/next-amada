@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import lozad from "lozad";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import Link from "next/link";
-import lozad from "lozad";
 const { REACT_APP_BASE_URL } = process.env;
 
 function Products({ product, slug }) {

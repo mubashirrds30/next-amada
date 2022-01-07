@@ -1,10 +1,10 @@
-import Category from "../components/Home/Category";
-import News from "../components/Home/News";
-import Banner from "../components/Home/Banner";
+import { NextSeo } from "next-seo";
 import Head from "next/head";
 import Layout from "../components/Global/Layout";
-import { NextSeo } from "next-seo";
 import About from "../components/Home/About";
+import Banner from "../components/Home/Banner";
+import Category from "../components/Home/Category";
+import News from "../components/Home/News";
 
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.REACT_APP_BASE_URL}/home-page`);
@@ -28,18 +28,6 @@ export default function Home({ banner, category, event, seo, info }) {
         <Head>
           <title>AMADA MIDDLE EAST FZCO</title>
           <link rel="icon" href="../static/favicon.ico" />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-          />
         </Head>
         <Banner banner={banner} />
         {category.isActive && <Category category={category} />}

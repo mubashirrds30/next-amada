@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import lozad from "lozad";
-import React, { useEffect } from "react";
-import Link from "next/link";
-import Layout from "../../components/Global/Layout";
-import Head from "next/head";
 import { BreadcrumbJsonLd } from 'next-seo';
+import Head from "next/head";
+import Link from "next/link";
+import React, { useEffect } from "react";
+import Layout from "../../components/Global/Layout";
 
 
 function Introduction() {
@@ -19,18 +19,6 @@ function Introduction() {
       <Head>
         <title>Introduction</title>
         <link rel="icon" href="../static/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-            />
       </Head>
       <Layout activeLink={"Company profile"}>
         <main>

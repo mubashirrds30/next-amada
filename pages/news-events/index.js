@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/link-passhref */
-import React, { useEffect } from "react";
+import { NewsArticleJsonLd, NextSeo } from "next-seo";
+import Head from "next/head";
+import React from "react";
+import Layout from "../../components/Global/Layout";
 import Banner from "../../components/News Listing/Banner";
 import Breadcrum from "../../components/News Listing/Breadcrum";
 import NewsCards from "../../components/News Listing/NewsCards";
-import Layout from "../../components/Global/Layout";
-import Head from "next/head";
-import { NextSeo } from "next-seo";
-import { NewsArticleJsonLd } from 'next-seo';
 
 
 export async function getServerSideProps() {
@@ -39,18 +38,6 @@ function NewsEvents({ event }) {
       <Head>
         <title>NEWS &amp; EVENTS</title>
         <link rel="icon" href="../static/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-            />
       </Head>
       <Layout activeLink={"News & Events"}>
         <main>

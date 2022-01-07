@@ -1,25 +1,20 @@
+import lozad from "lozad";
 import React, { useEffect, useState } from "react";
-// swiper bundle styles
-import "swiper/css/bundle";
-
-// swiper core styles
-import "swiper/css";
-
-// modules styles
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import SwiperCore, {
   Navigation,
   Pagination,
-  Thumbs,
-  SpaceBetween,
+  Thumbs
 } from "swiper";
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+
 SwiperCore.use([Navigation, Thumbs, Pagination]);
 const { REACT_APP_BASE_URL } = process.env;
 
-import "swiper/css/navigation";
-import lozad from "lozad";
 
 function Gallery({ news }) {
   // console.log(news)

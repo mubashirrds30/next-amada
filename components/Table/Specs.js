@@ -13,7 +13,7 @@ function Specs({ product }) {
 
   //static json conversion of Beta Object
   let specifications = [top];
-  product[0].tableData.map((ele, i) => {
+  product[0].tableData.map((ele) => {
     let tempObj = {};
     tempObj["name"] = ele?.fieldName?.trim() || "";
     tempObj["unit"] = ele?.unit || "";

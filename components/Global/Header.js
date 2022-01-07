@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import lozad from "lozad";
-import { SocialProfileJsonLd } from 'next-seo';
-import { LogoJsonLd } from 'next-seo';
+import { LogoJsonLd, SocialProfileJsonLd } from 'next-seo';
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 const { REACT_APP_BASE_URL } = process.env;
 
 function Header({ header, activeLink }) {

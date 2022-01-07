@@ -1,14 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState, useRef } from "react";
 import Link from "next/link";
-import useLozadImage from "../../hooks/useLozadImage";
+import React, { useState } from "react";
 import SwiperCore, {
-  Autoplay,
-  Navigation,
-  EffectFade,
-  Pagination,
+  Autoplay, EffectFade, Navigation, Pagination
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import useLozadImage from "../../hooks/useLozadImage";
 import { VideoModal } from "./VideoModal";
 SwiperCore.use([Autoplay, Navigation, EffectFade, Pagination]);
 const { REACT_APP_BASE_URL } = process.env;

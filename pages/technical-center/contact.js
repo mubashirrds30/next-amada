@@ -1,18 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import lozad from "lozad";
-import { useFormik } from "formik";
-import ReactDatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import MessageAlert from "../../components/Misc/MessageAlert";
-const { REACT_APP_BASE_URL } = process.env;
-import Head from "next/head";
-import Layout from "../../components/Global/Layout";
 import addDays from "date-fns/addDays";
 import subDays from "date-fns/subDays";
+import { useFormik } from "formik";
+import lozad from "lozad";
 import moment from "moment";
 import { BreadcrumbJsonLd } from 'next-seo';
+import Head from "next/head";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import Layout from "../../components/Global/Layout";
+import MessageAlert from "../../components/Misc/MessageAlert";
+const { REACT_APP_BASE_URL } = process.env;
 
 
 const Contact = () => {
@@ -117,18 +117,6 @@ const Contact = () => {
       <Head>
         <title>Contact</title>
         <link rel="icon" href="../static/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-            />
       </Head>
       <Layout activeLink={"Technical Center"}>
         <main>

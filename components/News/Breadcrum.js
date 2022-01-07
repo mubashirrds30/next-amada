@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
 import { BreadcrumbJsonLd } from 'next-seo';
+import Link from "next/link";
+import React from "react";
 
 
 function Breadcrum({ news }) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 const { REACT_APP_BASE_URL } = process.env;
 
 

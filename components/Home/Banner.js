@@ -1,24 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  Autoplay,
-  Navigation,
-  EffectFade,
-  Pagination,
-} from "swiper";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
 import lozad from "lozad";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import SwiperCore, {
+  Autoplay, EffectFade, Navigation, Pagination
+} from "swiper";
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import VideoModal from "./VideoModal";
 const { REACT_APP_BASE_URL } = process.env;
 
 SwiperCore.use([Autoplay, Navigation, EffectFade, Pagination]);
 
-import "swiper/css";
-import "swiper/css/bundle";
-import "swiper/css/pagination";
-import VideoModal from "./VideoModal";
 
 function Banner({ banner }) {
   const [showModal, setShowModal] = useState(false);

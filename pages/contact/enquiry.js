@@ -1,12 +1,12 @@
 import { useFormik } from "formik";
 import lozad from "lozad";
+import { BreadcrumbJsonLd } from 'next-seo';
+import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Layout from "../../components/Global/Layout";
 import MessageAlert from "../../components/Misc/MessageAlert";
 const { REACT_APP_BASE_URL } = process.env;
-import Layout from "../../components/Global/Layout";
-import Head from "next/head";
-import { BreadcrumbJsonLd } from 'next-seo';
 
 
 const Enquiry = () => {
@@ -99,18 +99,6 @@ const Enquiry = () => {
       <Head>
         <title>Enquiry</title>
         <link rel="icon" href="../static/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ7F7XCH9J"></script>
-          <script
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-NQ7F7XCH9J');
-          `,
-            }}
-            />
       </Head>
       <Layout activeLink={"Contact"}>
         <main>

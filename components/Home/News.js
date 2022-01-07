@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import lozad from "lozad";
+import { NewsArticleJsonLd } from 'next-seo';
 import Link from "next/dist/client/link";
 import React, { useEffect } from "react";
 const { REACT_APP_BASE_URL } = process.env;
-import { NewsArticleJsonLd } from 'next-seo';
 
 
 function News({ event }) {

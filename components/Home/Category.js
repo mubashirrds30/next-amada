@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/link-passhref */
 import lozad from "lozad";
+import { ProductJsonLd } from 'next-seo';
 import Link from "next/link";
 import React, { useEffect } from "react";
 const { REACT_APP_BASE_URL } = process.env;
-import { ProductJsonLd } from 'next-seo';
 
 
 function Category({ category }) {

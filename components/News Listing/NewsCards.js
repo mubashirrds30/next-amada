@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/link-passhref */
-import React, { useEffect } from "react";
-import Link from "next/link";
 import lozad from "lozad";
+import Link from "next/link";
+import React, { useEffect } from "react";
 const { REACT_APP_BASE_URL } = process.env;
 
 function NewsCards({ event }) {
