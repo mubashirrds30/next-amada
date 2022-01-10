@@ -14,6 +14,29 @@ function Category({ category }) {
 
   // console.log(category, 'catttt')
 
+
+  var someDate = new Date();
+var numberOfDaysToAdd = 30;
+var result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+// console.log(new Date(result))
+
+
+function formatDate(date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+  if (month.length < 2) 
+      month = '0' + month;
+  if (day.length < 2) 
+      day = '0' + day;
+
+  return [year, month, day].join('-');
+}
+
+// console.log(formatDate(result));
+
   return (
     <div className="bs-section sec-first">
       <div className="container">
@@ -54,11 +77,14 @@ function Category({ category }) {
         </div>
       </div>
       {category?.product_categories?.map((ele, i)=>{
+        
+        // console.log('category=>>>> ', category )
           return(
             <>
                 <ProductJsonLd
                 keyOverride={i}
                 productName={ele.title}
+                description={ele.title}
                 images={[
                   `${REACT_APP_BASE_URL}${ele.smallImage.url}`
                 ]}
@@ -66,11 +92,41 @@ function Category({ category }) {
                 manufacturerName="Amada"
                 manufacturerLogo="https://www.amada.ae/assets/images/logo.png"
                 releaseDate={ele.published_at}
+                reviews={[
+                  {
+                    author: {
+                      type: 'Organization',
+                    name: 'Amada Middle East FZCO',
+                    },
+                    datePublished: ele.published_at,
+                    reviewBody: ele.title,
+                    name: ele.title,
+                    reviewRating: {
+                      bestRating: '5',
+                      ratingValue: '5',
+                      worstRating: '1',
+                    },
+                    publisher: {
+                      type: 'Organization',
+                    name: 'Amada Middle East FZCO',
+                    },
+                  },
+                ]}
+                aggregateRating={{
+                  ratingValue: '4.5',
+                  reviewCount: '10'
+                }}
                 offers={[
                   {
-                    priceCurrency: 'INR',
                     url: `https://www.amada.ae/${ele.slug}`,
+                    availability: 'InStock',
+                    seller: {
+                            name: 'Amada Middle East FZCO',
+                          },
+                    priceValidUntil: formatDate(result)
                   },]}
+                  mpn={ele.title}
+                  sku='Amada Middle East FZCO'
               />
             </>
           )

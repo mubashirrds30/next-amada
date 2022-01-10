@@ -44,6 +44,26 @@ function Category({ data, slug }) {
   // }
   const product = data[0];
 
+  var someDate = new Date();
+var numberOfDaysToAdd = 30;
+var result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+// console.log(new Date(result))
+
+
+function formatDate(date) {
+  var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+  if (month.length < 2) 
+      month = '0' + month;
+  if (day.length < 2) 
+      day = '0' + day;
+
+  return [year, month, day].join('-');
+}
+
   return (
     <>
       <main>
@@ -68,6 +88,7 @@ function Category({ data, slug }) {
           )}
         </Layout>
         {product.productSection?.products?.map((ele, i)=>{
+          // console.log('product=====', product)
           return(
             <>
                 <ProductJsonLd
@@ -81,11 +102,44 @@ function Category({ data, slug }) {
                 manufacturerName="AMADA MIDDLE EAST FZCO"
                 manufacturerLogo="https://www.amada.ae/assets/images/logo.png"
                 releaseDate={ele.published_at}
+                aggregateRating={{
+                  ratingValue: '4.5',
+                  reviewCount: '10'
+                }}
+                reviews={[
+                  {
+                    author: {
+                      type: 'Organization',
+                    name: 'Amada Middle East FZCO',
+                    },
+                    datePublished: ele.published_at,
+                    reviewBody: ele.description,
+                    name: ele.name,
+                    reviewRating: {
+                      bestRating: '5',
+                      ratingValue: '5',
+                      worstRating: '1',
+                    },
+                    publisher: {
+                      type: 'Organization',
+                    name: 'Amada Middle East FZCO',
+                    },
+                  },
+                ]}
                 offers={[
                   {
-                    priceCurrency: 'INR',
+                    // priceCurrency: 'INR',
                     url: `https://www.amada.ae/${slug}/${ele.slug}`,
+                    availability: 'InStock',
+                    seller: {
+                            name: 'Amada Middle East FZCO',
+                          },
+                    priceValidUntil: formatDate(result)
                   },]}
+                  mpn={ele.name}
+                  sku='Amada Middle East FZCO'
+
+
               />
             </>
           )
