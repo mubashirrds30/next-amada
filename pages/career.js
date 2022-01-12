@@ -166,10 +166,15 @@ function Career() {
                               UAE.
                             </p>
                             <p>
+                              <strong>
+                                   Thank you for your interest in our company. Unfortunately, No job opening available at this time
+                              </strong>
+                            </p>
+                            {/* <p>
                               We are looking for bright & proactive engineers
                               for below roles.
-                            </p>
-                            <ul className="mod-list typ-main">
+                            </p> */}
+                            {/* <ul className="mod-list typ-main">
                               <li className="item">Sales Engineers</li>
                               <li className="item">Service Engineers</li>
                               <li className="item">
@@ -179,7 +184,7 @@ function Career() {
                             <p>
                               Please submit your resume @{" "}
                               <a href="mailto:info@amada.ae">info@amada.ae</a>
-                            </p>
+                            </p> */}
                           </div>
                         </div>
                         <div className="right-side">
