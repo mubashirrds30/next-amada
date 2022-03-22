@@ -28,6 +28,7 @@ function NewsCards({ event }) {
                     linkedin?.map((ele, index) => {
                       return (
                         <>
+                          {ele.isLinkedin  && ele.url && ele.smallImage?.url && ele.title && 
                           <li className="item" key={index}>
                             <div className="bs-img-overlay">
                               <div
@@ -43,6 +44,7 @@ function NewsCards({ event }) {
                                 </Link>
                                 <span className="icon icon-linkedin"></span>
                                 <div className="news-info">
+                                  {ele.url && ele.date && 
                                   <time className="date">
                                     {" "}
                                     {`${new Date(ele.date).toLocaleString(
@@ -55,12 +57,12 @@ function NewsCards({ event }) {
                                       "default",
                                       { year: "numeric" }
                                     )}`}
-                                  </time>
+                                  </time>}
                                   <p className="desc">{ele.title}</p>
                                 </div>
                               </div>
                             </div>
-                          </li>
+                          </li>}
                         </>
                       );
                     })}
@@ -68,24 +70,29 @@ function NewsCards({ event }) {
                     notLinkedin?.map((ele, index) => {
                       return (
                         <>
-                          <li className="item" key={index}>
+                          {!ele.isLinkedin && ele.smallImage?.url && ele.title &&<li className="item" key={index}>
                             <div className="bs-img-overlay">
                               <div
                                 className="img-wrap bs-news lozad-background lozad"
                                 data-background-image={`${REACT_APP_BASE_URL}${ele.smallImage?.url}`}
-                              >
-                                <Link href={`/news-events/${ele.slug}`}>
-                                  <a
-                                    href="imtex2020detail.shtml"
-                                    className="news-link"
-                                  ></a>
-                                </Link>
+                              >{
+                                ele.gallery.length === 0 && ele.pdfFile && ele.pdfFile.url  ? 
+                                  <a href={`${REACT_APP_BASE_URL}${ele.pdfFile.url}`} 
+                                  target="_blank"
+                                  rel="noreferrer" 
+                                  className="news-link">
+                                  </a>
+                                : 
+                                <Link href={`/news-events/${ele.slug}`} key={index}>
+                                    <a className="news-link"></a>
+                                  </Link>
+                              }
                                 <div className="news-info">
                                   <p className="desc">{ele.title}</p>
                                 </div>
                               </div>
                             </div>
-                          </li>
+                          </li>}
                         </>
                       );
                     })}

@@ -43,9 +43,7 @@ function News({ event }) {
                               <Link href={ele.url} key={index}>
                                 <a className="news-link" target="_blank"></a>
                               </Link>
-                              {ele.url && (
-                                <span className="icon icon-linkedin"></span>
-                              )}
+                              <span className="icon icon-linkedin"></span>
                               <div className="news-info">
                                 {ele.url && ele.date && (
                                   <time dateTime="2020-08" className="date">
@@ -94,9 +92,6 @@ function News({ event }) {
                                 <a className="news-link"></a>
                               </Link>
                           }
-                            {ele.url && (
-                              <span className="icon icon-linkedin"></span>
-                            )}
                             <div className="news-info">
                               <p className="desc">{ele.title}</p>
                             </div>
