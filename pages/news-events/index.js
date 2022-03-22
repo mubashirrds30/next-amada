@@ -22,7 +22,7 @@ export async function getServerSideProps() {
 }
 
 function NewsEvents({ event }) {
-  // console.log(event, 'news')
+  console.log('news', event)
 
   return (
     <>

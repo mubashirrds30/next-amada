@@ -31,7 +31,7 @@ function News({ event }) {
               {linkedin?.slice(0, 3).map((ele, index) => {
                 return (
                   <>
-                    {ele.isLinkedin && (
+                    {ele.isLinkedin  && ele.url && ele.smallImage?.url && ele.title && (
                       <>
                         {/* <Link href={ele.url} key={index}> */}
                         <li className="item" key={index}>
@@ -47,7 +47,7 @@ function News({ event }) {
                                 <span className="icon icon-linkedin"></span>
                               )}
                               <div className="news-info">
-                                {ele.url && (
+                                {ele.url && ele.date && (
                                   <time dateTime="2020-08" className="date">
                                     {`${new Date(ele.date).toLocaleString(
                                       "default",
@@ -76,16 +76,24 @@ function News({ event }) {
               {notLinkedin?.slice(0, 2).map((ele, index) => {
                 return (
                   <>
-                    {!ele.isLinkedin && (
+                    {!ele.isLinkedin && ele.smallImage?.url && ele.title && (
                       <li className="item" key={index}>
                         <div className="bs-img-overlay">
                           <div
                             className="img-wrap bs-news lozad-background lozad"
                             data-background-image={`${REACT_APP_BASE_URL}${ele.smallImage?.url}`}
-                          >
+                          >{
+                            ele.gallery.length === 0 && ele.pdfFile && ele.pdfFile.url  ? 
+                              <a href={`${REACT_APP_BASE_URL}${ele.pdfFile.url}`} 
+                              target="_blank"
+                              rel="noreferrer" 
+                              className="news-link">
+                              </a>
+                            : 
                             <Link href={`/news-events/${ele.slug}`} key={index}>
-                              <a className="news-link"></a>
-                            </Link>
+                                <a className="news-link"></a>
+                              </Link>
+                          }
                             {ele.url && (
                               <span className="icon icon-linkedin"></span>
                             )}
@@ -120,7 +128,7 @@ function News({ event }) {
               url={ele.isLinkedin ? ele.url : `https://www.amada.ae/news-events/${ele.slug}`}
               title={ele.title}
               images={[
-                `${REACT_APP_BASE_URL}${ele.smallImage.url}`
+                `${REACT_APP_BASE_URL}${ele.smallImage?.url}`
               ]}
               section="technology"
               datePublished={ele.date}
