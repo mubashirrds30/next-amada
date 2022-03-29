@@ -63,7 +63,7 @@ function Introduction() {
                                 <img
                                   className="lozad"
                                   // data-src="/assets/images/amada-india-m.jpg"
-                                  data-src="/assets/images/本社棟全景.JPG"
+                                  data-src="/assets/images/building.JPG"
                                   alt="amada-india-m"
                                 />
                                 <figcaption className="sub-title">
@@ -108,7 +108,7 @@ function Introduction() {
                                 <img
                                   className="lozad"
                                   // data-src="/assets/images/amada-india-m.jpg"
-                                  data-src="/assets/images/本社棟全景.JPG"
+                                  data-src="/assets/images/building.JPG"
                                   alt="amada-india-m"
                                 />
                                 <figcaption className="sub-title">
