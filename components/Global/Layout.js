@@ -20,6 +20,7 @@ function Layout({ children, activeLink }) {
 
         setHeader(json.header);
         setFooter(json.footer);
+        console.log(json.flashNewsSection.flashNewsList.length)
         setFlashNews(json.flashNewsSection);
       } catch (error) {
         console.error(error);
@@ -32,8 +33,8 @@ function Layout({ children, activeLink }) {
     <div>
       <Header header={header} activeLink={activeLink} />
       {children}
-      <Footer footer={footer} headerMenu={header} activeLink={activeLink} />
-      <FlashNewsPopup flashNewsList={flashNews} />
+      <Footer footer={footer} headerMenu={header} activeLink={activeLink} flashNews={flashNews} />
+      {flashNews?.flashNewsList?.length > 0 && <FlashNewsPopup flashNewsList={flashNews} />}
     </div>
   );
 }
