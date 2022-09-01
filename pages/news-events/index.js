@@ -41,32 +41,38 @@ function NewsEvents({ event }) {
       <Layout activeLink={"News & Events"}>
         <main>
           <div className="main lyt-content js-bg">
-            <Banner event={event} />
-            <Breadcrum event={event} />
-            {event.newsSection.news_events.length > 0 && event.newsSection.isActive ? <NewsCards event={event} /> : <div className="mod-greeting"><h1 className="title">Coming soon</h1></div>}
+            {event.bannerTitle || event.bannerImage
+              ? <>
+                <Banner event={event} />
+                <Breadcrum event={event} />
+                {event.newsSection.news_events.length > 0 && event.newsSection.isActive ? <NewsCards event={event} /> : <div className="mod-greeting"><h1 className="title">Coming soon</h1></div>}
+
+              </> :
+              <div className="mod-greeting"><h1 className="title">Coming soon</h1></div>
+            }
           </div>
         </main>
-        {event?.newsSection?.news_events?.map((ele, i)=>{
+        {event?.newsSection?.news_events?.map((ele, i) => {
           return (
             <>
-            <NewsArticleJsonLd
-              keyOverride={i}
-              url={`https://www.amada.ae/news-events`}
-              title={ele.title}
-              images={[
-                `${process.env.REACT_APP_BASE_URL}${ele.smallImage.url}`
-              ]}
-              section="technology"
-              datePublished={ele.published_at}
-              dateModified={ele.updated_at}
-              authorName="Amada"
-              publisherName="Amada Bureau"
-              publisherLogo="https://www.amada.ae/assets/images/logo.png"
-              body={ele.subtitle}
-            />
+              <NewsArticleJsonLd
+                keyOverride={i}
+                url={`https://www.amada.ae/news-events`}
+                title={ele.title}
+                images={[
+                  `${process.env.REACT_APP_BASE_URL}${ele.smallImage.url}`
+                ]}
+                section="technology"
+                datePublished={ele.published_at}
+                dateModified={ele.updated_at}
+                authorName="Amada"
+                publisherName="Amada Bureau"
+                publisherLogo="https://www.amada.ae/assets/images/logo.png"
+                body={ele.subtitle}
+              />
             </>
           )
-         })}
+        })}
       </Layout>
     </>
   );
