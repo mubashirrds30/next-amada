@@ -8,8 +8,10 @@
   z-index: 15;
   width: 30rem;
   transition: all 0.3s ease;
+
   &.active {
     transform: translate(0, -50%);
+
     .nf-trigger {
       .icon {
         &:before {
@@ -19,6 +21,7 @@
       }
     }
   }
+
   .nf-title {
     font-size: 1.6rem;
     line-height: 1.8rem;
@@ -27,6 +30,7 @@
     color: $clr-white;
     padding-top: 1rem;
     position: relative;
+
     &:before {
       content: "";
       width: 2.5rem;
@@ -38,21 +42,32 @@
       left: 0;
     }
   }
+
   .nf-text {
     font-size: 1.2rem;
     line-height: 1.6rem;
     color: $clr-white;
     font-weight: $font-regular;
   }
+
   .nf-head {
     padding: 2rem 2rem 0 2rem;
     margin-bottom: 4rem;
   }
+
+  .nf-link-icon {
+    width: 5rem;
+    height: 5rem;
+    background: url('../../images/link.svg') no-repeat 0 0 transparent;
+    background-size: cover;
+  }
+
   .nf-item {
     display: flex;
     align-items: center;
     position: relative;
     padding-right: 3rem;
+
     .nf-link {
       position: absolute;
       left: 0;
@@ -61,6 +76,7 @@
       bottom: 0;
       z-index: 1;
     }
+
     .nf-shape {
       position: absolute;
       top: 0;
@@ -68,17 +84,20 @@
       left: 0;
       z-index: -1;
     }
+
     &:hover {
       .nf-shape {
         width: 90%;
       }
     }
   }
+
   .nf-shape {
     background: $clr-primary;
     width: 5rem;
     position: relative;
     transition: all 0.3s ease;
+
     &:after {
       content: "";
       width: 0;
@@ -92,6 +111,7 @@
       right: -1.5rem;
     }
   }
+
   .nf-bullet {
     padding: 0.5rem;
     text-align: center;
@@ -99,6 +119,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 6rem;
 
     margin-right: 3rem;
 
@@ -108,6 +129,7 @@
       color: $clr-white;
       font-weight: $font-bold;
       text-transform: uppercase;
+
       .text-lg {
         display: block;
         font-size: 2.4rem;
@@ -115,17 +137,21 @@
       }
     }
   }
+
   .nf-body {
     padding-bottom: 4rem;
+
     .list {
       .item {
         margin-bottom: 2rem;
+
         &:last-child {
           margin-bottom: 0;
         }
       }
     }
   }
+
   .nf-trigger {
     padding: 1.5rem;
     background: rgba(0, 0, 0, 0.8);
@@ -134,6 +160,7 @@
     transform: translate(-100%, -50%);
     border-top-left-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
+
     .icon {
       font-size: 2rem;
       color: $clr-white;
@@ -150,18 +177,22 @@
     bottom: 0;
     transform: translate(100%, 0);
     width: auto;
+
     &.active {
       transform: translate(0, 0);
+
       .nf-trigger {
         top: 1rem;
         right: 1rem;
         transform: translate(0, 0);
         background: transparent;
+
         .icon {
           font-size: 1.5rem;
         }
       }
     }
+
     .nf-text {
       padding-right: 4rem;
     }

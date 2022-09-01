@@ -16,11 +16,14 @@ const SingleFlashNews = ({ date, monthYear, flashNewsDetail, url }) => {
 
       <span className="nf-shape"></span>
       <div className="nf-bullet">
-        <time className="date" dateTime="2021-07-20">
-          <span className="text-lg">{date}</span>
-          <span className="cm-line-break">{monthYear?.split(" ")[0]}</span>
-          <span className="cm-line-break">{monthYear?.split(" ")[1]}</span>
-        </time>
+        {!date ?
+          <span className="nf-link-icon"></span>
+          :
+          <time className="date" dateTime="2021-07-20">
+            <span className="text-lg">{date}</span>
+            <span className="cm-line-break">{monthYear?.split(" ")[0]}</span>
+            <span className="cm-line-break">{monthYear?.split(" ")[1]}</span>
+          </time>}
       </div>
       <p className="nf-text">{flashNewsDetail}</p>
     </div>
