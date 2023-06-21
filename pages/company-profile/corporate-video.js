@@ -46,11 +46,11 @@ const CorporateVideo = () => {
                         data-poster="assets/images/poster-image.jpg"
                       >
                         <source
-                          src="/assets/video/amada middle east (2).mp4"
+                          src="/assets/video/The Engineering Amada.mp4"
                           type="video/mp4"
                         />
                         <source
-                          src="/assets/video/amada middle east (2).ogg"
+                          src="/assets/video/The Engineering Amada.ogg"
                           type="video/ogg"
                         />
                       </video>

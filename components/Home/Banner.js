@@ -78,7 +78,7 @@ function Banner({ banner }) {
                         data-poster={`${REACT_APP_BASE_URL}${ele.desktopImage.url}`}
                       >
                         <source
-                          src={`${REACT_APP_BASE_URL}${ele.video?.url}`}
+                          src={'/assets/video/The Engineering Amada.mp4'}
                           type="video/mp4"
                         />
                       </video>
@@ -164,7 +164,7 @@ function Banner({ banner }) {
           })}
         </Swiper>
         <VideoModal
-          videoUrl={`${REACT_APP_BASE_URL}${videoUrl}`}
+          videoUrl={'/assets/video/The Engineering Amada.mp4'}
           closeModal={closeModal}
           showModal={showModal}
           setState={setState}
