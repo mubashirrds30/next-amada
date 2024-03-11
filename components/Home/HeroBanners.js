@@ -122,7 +122,7 @@ const Banner = ({ data }) => {
                             {singleBanner.bannerSubTitle}
                           </p>
                           {singleBanner.isProduct ? (
-                            <Link href={singleBanner.btnUrl}>
+                            <Link href={singleBanner?.btnUrl}>
                               <a className="bs-btn btn-default">
                                 click here for details
                               </a>

@@ -51,7 +51,7 @@ function Gallery({ news }) {
                               <SwiperSlide
                                 key={ind}
                                 className="lozad-background lozad"
-                                data-background-image={`${REACT_APP_BASE_URL}${ele.image.url}`}
+                                data-background-image={`${REACT_APP_BASE_URL}${ele?.image?.url}`}
                               >
                                 <div className="gallery-slide-info">
                                   <p className="text">{ele.title}</p>
@@ -77,7 +77,7 @@ function Gallery({ news }) {
                               <SwiperSlide
                                 key={ind}
                                 className="lozad-background lozad"
-                                data-background-image={`${REACT_APP_BASE_URL}${ele.image.url}`}
+                                data-background-image={`${REACT_APP_BASE_URL}${ele?.image?.url}`}
                               ></SwiperSlide>
                             </>
                           );

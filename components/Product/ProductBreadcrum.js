@@ -20,7 +20,7 @@ function ProductBreadcrum({ product }) {
             </a>
           </li>
           <li className="item">
-            <Link href={`/${product.product_category.slug}`}>
+            <Link href={`/${product?.product_category?.slug}`}>
               <a className="link">{product?.product_category?.title}</a>
             </Link>
           </li>
@@ -37,17 +37,17 @@ function ProductBreadcrum({ product }) {
           {
             position: 2,
             name: 'products',
-            item: `https://www.amada.ae/${product.product_category.slug}`,
+            item: `https://www.amada.ae/${product?.product_category?.slug}`,
           },
           {
             position: 3,
             name: product?.product_category?.title,
-            item: `https://www.amada.ae/${product.product_category.slug}`,
+            item: `https://www.amada.ae/${product?.product_category?.slug}`,
           },
           {
             position: 4,
             name: product?.name,
-            item: `https://www.amada.ae/${product.product_category.slug}/${product?.slug}`,
+            item: `https://www.amada.ae/${product?.product_category?.slug}/${product?.slug}`,
           },
         ]}
       />

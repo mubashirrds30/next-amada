@@ -18,10 +18,10 @@ function Layout({ children, activeLink }) {
         const json = await res.json();
         // console.log(json, "full header");
 
-        setHeader(json.header);
-        setFooter(json.footer);
-        console.log(json.flashNewsSection.flashNewsList.length)
-        setFlashNews(json.flashNewsSection);
+        setHeader(json?.header);
+        setFooter(json?.footer);
+        // console.log(json.flashNewsSection.flashNewsList.length)
+        setFlashNews(json?.flashNewsSection);
       } catch (error) {
         console.error(error);
       }

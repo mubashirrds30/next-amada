@@ -163,7 +163,7 @@ function Footer({ footer, flashNews }) {
                       rel="noreferrer"
                     >
                       <img
-                        src={`${REACT_APP_BASE_URL}${ele.socialMediaLogo.url}`}
+                        src={`${REACT_APP_BASE_URL}${ele.socialMediaLogo?.url}`}
                         alt={ele.link}
                       />
                     </a>

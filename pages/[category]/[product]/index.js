@@ -120,7 +120,7 @@ function Product({ data }) {
           offers={[
             {
               // priceCurrency: 'INR',
-              url: `https://www.amada.ae/${product.product_category.slug}/${product.slug}`,
+              url: `https://www.amada.ae/${product?.product_category?.slug}/${product.slug}`,
               availability: 'InStock',
               seller: {
                       name: 'Amada Middle East FZCO',

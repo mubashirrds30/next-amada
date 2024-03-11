@@ -98,33 +98,33 @@ function Header({ header, activeLink }) {
           {menu?.map((ele, index) => (
             <li
               className={`nav-item ${
-                ele.subMenu.length > 0 ? "bs-sub-menu " : ""
+                ele?.subMenu.length > 0 ? "bs-sub-menu " : ""
               } 
-              ${ele.subMenu[0]?.subMenuLink?.length > 0 ? "typ-mega-menu" : ""}
-              ${activeLink === ele.menuName ? "active" : ""}`}
+              ${ele?.subMenu[0]?.subMenuLink?.length > 0 ? "typ-mega-menu" : ""}
+              ${activeLink === ele?.menuName ? "active" : ""}`}
               key={index}
             >
-              {ele.subMenu.length > 0 ? (
+              {ele?.subMenu.length > 0 ? (
                 <a
                   href={"javascript:void(0)"}
                   className={`nav-link mb-sub-menu-title ${
-                    openMenus && menuName === ele.menuName ? "open" : ""
+                    openMenus && menuName === ele?.menuName ? "open" : ""
                   }`}
-                  onClick={() => handleMenus(ele.menuName)}
+                  onClick={() => handleMenus(ele?.menuName)}
                 >
-                  {ele.menuName}
+                  {ele?.menuName}
                 </a>
               ) : (
-                <Link href={ele.URL}>
-                  <a className={`nav-link`}>{ele.menuName}</a>
+                <Link href={ele?.URL}>
+                  <a className={`nav-link`}>{ele?.menuName}</a>
                 </Link>
               )}
 
               
-                {ele.subMenu && ele.subMenu[0]?.subMenuLink?.length === 0 && (
+                {ele?.subMenu && ele?.subMenu[0]?.subMenuLink?.length === 0 && (
                   <div
                   className={`menu-wrap mb-sub-menu-body ${
-                    openMenus && menuName === ele.menuName ? "sub-menu-open" : ""
+                    openMenus && menuName === ele?.menuName ? "sub-menu-open" : ""
                   }
                   `}
                 >
@@ -132,7 +132,7 @@ function Header({ header, activeLink }) {
                     <li className="quicklink-item">
                       <div className="mod-quicklink mb-accord-body">
                         <ul className="wrap">
-                          {ele.subMenu.map((elm, ind) => (
+                          {ele?.subMenu.map((elm, ind) => (
                             <li className="item" key={ind}>
                               <a
                                 href={elm.URL}
@@ -165,8 +165,8 @@ function Header({ header, activeLink }) {
                   </ul>
                   </div>
                 )}
-                {ele.subMenu && ele.subMenu[0]?.subMenuLink?.length > 0 && (
-                 <div className={`menu-wrap mb-sub-menu-body ${openMenus && menuName === ele.menuName ? "sub-menu-open" : ""}`}>
+                {ele?.subMenu && ele?.subMenu[0]?.subMenuLink?.length > 0 && (
+                 <div className={`menu-wrap mb-sub-menu-body ${openMenus && menuName === ele?.menuName ? "sub-menu-open" : ""}`}>
                  {chunkArray(ele && ele.subMenu, 4).map((ql, i) => {
                    // console.log("ql",  ql)
                    return(
@@ -175,19 +175,19 @@ function Header({ header, activeLink }) {
                          return(
                            <>
                            <li className="quicklink-item" key={inn}>
-                           <div className="mod-quicklink" onClick={() => handleSubMenus(ell.subMenu)}>
-                               <h2 className={`title mb-accord-title ${subMenuName == ell.subMenu && openSubMenu ? "open" : ""}`}>
-                                   <a href={ell.URL}>{ell.subMenu}</a>
+                           <div className="mod-quicklink" onClick={() => handleSubMenus(ell?.subMenu)}>
+                               <h2 className={`title mb-accord-title ${subMenuName == ell?.subMenu && openSubMenu ? "open" : ""}`}>
+                                   <a href={ell?.URL}>{ell?.subMenu}</a>
                                </h2>
                                <ul className="wrap mb-accord-body"
                                style={
                                  window.innerWidth < 768 ? (
                                    {
-                                     display: subMenuName == ell.subMenu && openSubMenu ? "block" : "none",
+                                     display: subMenuName == ell?.subMenu && openSubMenu ? "block" : "none",
                                    }
                                  ) : null
                                }>
-                               {ell.subMenuLink.map((sub, i) => (
+                               {ell?.subMenuLink.map((sub, i) => (
                                  <li className="item" key={i}>
                                      <a href={sub.URL} target={`${sub.URL && sub.URL.includes("http") ? '_blank' : '_self'}`} className="link">{sub.subMenuLink}</a>
                                  </li>
@@ -214,14 +214,14 @@ function Header({ header, activeLink }) {
               {socialMediaLinks?.map((ele, index) => (
                 <a
                   key={index}
-                  href={ele.link}
+                  href={ele?.link}
                   target={`${
-                    ele.link && ele.link.includes("http") ? "_blank" : "_self"
+                    ele?.link && ele?.link.includes("http") ? "_blank" : "_self"
                   }`}
                   className="icon icon-youtube"
                 >
                   <img
-                    src={`${process.env.REACT_APP_BASE_URL}${ele.socialMediaLogo.url}`}
+                    src={`${process.env.REACT_APP_BASE_URL}${ele?.socialMediaLogo?.url}`}
                   />
                 </a>
               ))}

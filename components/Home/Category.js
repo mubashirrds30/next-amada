@@ -51,19 +51,19 @@ function formatDate(date) {
                   <>
                     <li className="item" key={ind}>
                       <div className="bs-prod-card">
-                        <Link href={`/${ele.slug}`}>
+                        <Link href={`/${ele?.slug}`}>
                           <a className="prod-link"></a>
                         </Link>
                         <div
                           className="img-wrap lozad-background lozad"
-                          data-background-image={`${REACT_APP_BASE_URL}${ele.smallImage.url}`}
+                          data-background-image={`${REACT_APP_BASE_URL}${ele?.smallImage.url}`}
                         ></div>
                         <div className="info-wrap">
-                          {ele.title.length > 1 ? (
-                            <h3 className="title">{ele.title}</h3>
+                          {ele?.title.length > 1 ? (
+                            <h3 className="title">{ele?.title}</h3>
                           ) : (
                             <h3 className="title">
-                              <span className="cm-line-break">{ele.title}</span>
+                              <span className="cm-line-break">{ele?.title}</span>
                             </h3>
                           )}
                         </div>
@@ -83,24 +83,24 @@ function formatDate(date) {
             <>
                 <ProductJsonLd
                 keyOverride={i}
-                productName={ele.title}
-                description={ele.title}
+                productName={ele?.title}
+                description={ele?.title}
                 images={[
-                  `${REACT_APP_BASE_URL}${ele.smallImage.url}`
+                  `${REACT_APP_BASE_URL}${ele?.smallImage.url}`
                 ]}
                 brand="Amada"
                 manufacturerName="Amada"
                 manufacturerLogo="https://www.amada.ae/assets/images/logo.png"
-                releaseDate={ele.published_at}
+                releaseDate={ele?.published_at}
                 reviews={[
                   {
                     author: {
                       type: 'Organization',
                     name: 'Amada Middle East FZCO',
                     },
-                    datePublished: ele.published_at,
-                    reviewBody: ele.title,
-                    name: ele.title,
+                    datePublished: ele?.published_at,
+                    reviewBody: ele?.title,
+                    name: ele?.title,
                     reviewRating: {
                       bestRating: '5',
                       ratingValue: '5',
@@ -118,14 +118,14 @@ function formatDate(date) {
                 }}
                 offers={[
                   {
-                    url: `https://www.amada.ae/${ele.slug}`,
+                    url: `https://www.amada.ae/${ele?.slug}`,
                     availability: 'InStock',
                     seller: {
                             name: 'Amada Middle East FZCO',
                           },
                     priceValidUntil: formatDate(result)
                   },]}
-                  mpn={ele.title}
+                  mpn={ele?.title}
                   sku='Amada Middle East FZCO'
               />
             </>

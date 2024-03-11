@@ -57,15 +57,15 @@ function Banner({ banner }) {
           pagination={{ clickable: true }}
           // navigation={true}
         >
-          {banner.map((ele, index) => {
+          {banner?.map((ele, index) => {
             return (
               <>
-                {ele.video ? (
+                {ele?.video ? (
                   <>
                     <SwiperSlide
                       key={index}
                       className="lozad-background hidden-xs js-video-slide typ-video lozad"
-                      data-background-image={`${REACT_APP_BASE_URL}${ele.desktopImage.url}`}
+                      data-background-image={`${REACT_APP_BASE_URL}${ele?.desktopImage?.url}`}
                       data-swiper-autoplay="22000"
                     >
                       <video
@@ -75,20 +75,20 @@ function Banner({ banner }) {
                         loop
                         muted
                         className="lozad-picture lozad"
-                        data-poster={`${REACT_APP_BASE_URL}${ele.desktopImage.url}`}
+                        data-poster={`${REACT_APP_BASE_URL}${ele?.desktopImage?.url}`}
                       >
                         <source
                           src={'/assets/video/The Engineering Amada.mp4'}
                           type="video/mp4"
                         />
                       </video>
-                      {ele.modalVideo && (
+                      {ele?.modalVideo && (
                         <button
                           className="btn-play js-modal-btn"
                           data-target="videoModal"
                           onClick={() =>
                             playVideo(
-                              ele.modalVideo !== null && ele.modalVideo?.url
+                              ele?.modalVideo !== null && ele?.modalVideo?.url
                             )
                           }
                         >
@@ -104,25 +104,25 @@ function Banner({ banner }) {
                   <>
                     <SwiperSlide
                       className={`slide-item ${
-                        ele.isProduct ? "typ-product" : ""
+                        ele?.isProduct ? "typ-product" : ""
                       }`}
                       key={index}
                     >
                       <div className="banner-title-wrap">
-                        {ele.isProduct ? (
-                          <h2 className="banner-title">{ele.title}</h2>
+                        {ele?.isProduct ? (
+                          <h2 className="banner-title">{ele?.title}</h2>
                         ) : (
-                          <h2 className="banner-title">{ele.title}</h2>
+                          <h2 className="banner-title">{ele?.title}</h2>
                         )}
 
-                        {ele.isProduct ? (
-                          <p className="banner-sub-title">{ele.subtitle}</p>
+                        {ele?.isProduct ? (
+                          <p className="banner-sub-title">{ele?.subtitle}</p>
                         ) : (
-                          <p className="banner-sub-title">{ele.subtitle}</p>
+                          <p className="banner-sub-title">{ele?.subtitle}</p>
                         )}
 
-                        {ele.isProduct && (
-                          <Link href={ele.productURL}>
+                        {ele?.isProduct && ele?.productURL && (
+                          <Link href={ele?.productURL}>
                             <a className="bs-btn btn-default">
                               click here for details
                             </a>
@@ -132,28 +132,28 @@ function Banner({ banner }) {
 
                       <div className="banner-info mod-count-text">
                         <div className="count">
-                          {ele.step < 10 ? 0 : null}
-                          {ele.step}
+                          {ele?.step < 10 ? 0 : null}
+                          {ele?.step}
                         </div>
-                        <div className="text">{`${ele.stepName}`}</div>
+                        <div className="text">{`${ele?.stepName}`}</div>
                       </div>
                       <span className="corner-shape"></span>
                       <picture className="banner-image">
                         <source
-                          srcSet={`${REACT_APP_BASE_URL}${ele.desktopImage?.url}`}
+                          srcSet={`${REACT_APP_BASE_URL}${ele?.desktopImage?.url}`}
                           media={"(min-width: 1280px)"}
                         />
                         <source
-                          srcSet={`${REACT_APP_BASE_URL}${ele.desktopImage?.url}`}
+                          srcSet={`${REACT_APP_BASE_URL}${ele?.desktopImage?.url}`}
                           media={"(min-width: 980px)"}
                         />
                         <source
-                          srcSet={`${REACT_APP_BASE_URL}${ele.mobileImage?.url}`}
+                          srcSet={`${REACT_APP_BASE_URL}${ele?.mobileImage?.url}`}
                           media={"(min-width: 320px)"}
                         />
                         <img
-                          src={`${REACT_APP_BASE_URL}${ele.desktopImage?.url}`}
-                          alt={ele.title}
+                          src={`${REACT_APP_BASE_URL}${ele?.desktopImage?.url}`}
+                          alt={ele?.title}
                         />
                       </picture>
                     </SwiperSlide>
