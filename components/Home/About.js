@@ -10,38 +10,38 @@ function About({ info }) {
     const { observe } = lozad();
     observe();
   }, []);
-  // console.log(info);
+  console.log('info---- ', info);
   return (
     <section>
       <div className="bs-section">
         <div className="container">
           <div className="sec-cont">
             <ul className="bs-chain-info typ-img-lg">
-              {info.info.map((ele, i) => {
+              {info?.info?.map((ele, i) => {
                 return (
                   <>
                     <li key={i} className="item">
                       <div className="bs-img-desc">
                         <div className="left-side">
-                          <h2 className="title">{ele.title}</h2>
+                          <h2 className="title">{ele?.title}</h2>
                           <div className="img-wrap">
                             <img
                               className="lozad"
-                              alt={ele.title}
-                              data-src={`${REACT_APP_BASE_URL}${ele.image.url}`}
+                              alt={ele?.title}
+                              data-src={`${REACT_APP_BASE_URL}${ele?.image?.url}`}
                             />
                           </div>
                           <div className="sec-desc">
                             <p>
                               <ReactMarkdown className="rich-text">
-                                {ele.description}
+                                {ele?.description}
                               </ReactMarkdown>
                             </p>
                           </div>
                           <div className="action-wrap">
-                            <Link href={ele.buttonUrl}>
+                            <Link href={ele?.buttonUrl}>
                               <a className="bs-btn btn-default">
-                                {ele.buttonText}
+                                {ele?.buttonText}
                               </a>
                             </Link>
                           </div>
@@ -50,8 +50,8 @@ function About({ info }) {
                           <div className="img-wrap">
                             <img
                               className="lozad"
-                              alt={ele.title}
-                              data-src={`${REACT_APP_BASE_URL}${ele.image.url}`}
+                              alt={ele?.title}
+                              data-src={`${REACT_APP_BASE_URL}${ele?.image?.url}`}
                             />
                           </div>
                         </div>

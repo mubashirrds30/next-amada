@@ -7,21 +7,21 @@ import { useEffect } from "react";
 import Layout from "../../components/Global/Layout";
 import Gallery from "../../components/News/Gallery";
 
-export async function getServerSideProps() {
-  const res = await fetch(
-    `${process.env.REACT_APP_BASE_URL}/technical-center`
-  );
-  const json = await res.json();
+// export async function getServerSideProps() {
+//   const res = await fetch(
+//     `${process.env.REACT_APP_BASE_URL}/technical-center`
+//   );
+//   const json = await res?.json();
 
-  return {
-    props: {
-      gallery: json,
-    },
-  };
-}
+//   return {
+//     props: {
+//       gallery: json,
+//     },
+//   };
+// }
 
 
-const About = ({gallery}) => {
+const About = ({}) => {
 // console.log('gallery', gallery);
 
   useEffect(() => {
@@ -153,7 +153,7 @@ const About = ({gallery}) => {
                     </ul>
                   </div>
                 </div>
-              <Gallery news={gallery} />
+              {/* <Gallery news={gallery} /> */}
               </div>
 
             </section>
