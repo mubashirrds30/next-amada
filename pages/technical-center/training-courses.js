@@ -87,7 +87,7 @@ const TraningCourses = () => {
                               />
                             </div>
                             <h3 className="title">
-                              Fiber LASER Machine Operational Training
+                              Punching Machine Operational Training
                             </h3>
                             <div className="bs-table">
                               <div className="table-wrap">
@@ -108,7 +108,7 @@ const TraningCourses = () => {
                                         style={{ width: "25%" }}
                                         className="t-title"
                                       >
-                                        Course Code & Content
+                                        Course Code &amp; Content
                                       </th>
                                       <th
                                         style={{ width: "25%" }}
@@ -121,13 +121,12 @@ const TraningCourses = () => {
                                   <tbody>
                                     <tr>
                                       <td className="t-desc">
-                                        Laser Operation Training Fiber Series
-                                        (LCG-AJ Series / ENSIS)
+                                        NCT Operation Training- AE/EM + AMNC-F Controller
                                       </td>
                                       <td className="t-desc">
-                                        MCLAS-AJ
+                                        MCNCT-AE &amp; EM
                                         <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/ENSIS_LCG-AJ-3i.pdf">
+                                          <Link href="/assets/doc/schedules/MCNCT-AEANDEM.pdf">
                                             <a
                                               target="_blank"
                                               className="icon icon-pdf"
@@ -137,15 +136,15 @@ const TraningCourses = () => {
                                       </td>
                                       <td className="t-desc">4</td>
                                     </tr>
-                                    {/* <tr>
+                                    <tr>
                                       <td className="t-desc">
-                                        Laser Operation Training LCG/FO M2 –CO2
-                                        series
+                                        NCT Operation Training EM M2 Series + 3i
+                                        Controller
                                       </td>
                                       <td className="t-desc">
-                                        MCLAS-CO
+                                        MCNCT-EM M2
                                         <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/FOM2.pdf">
+                                          <Link href="/assets/doc/schedules/'MCNCT-EM M2.pdf">
                                             <a
                                               target="_blank"
                                               className="icon icon-pdf"
@@ -154,24 +153,6 @@ const TraningCourses = () => {
                                         </div>
                                       </td>
                                       <td className="t-desc">4</td>
-                                    </tr> */}
-                                    <tr>
-                                      <td className="t-desc">
-                                        Laser cutting know/How Advance Training
-                                        for CO2
-                                      </td>
-                                      <td className="t-desc">
-                                        MCLASADV
-                                        <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/LASER-FOM2series.pdf">
-                                            <a
-                                              target="_blank"
-                                              className="icon icon-pdf"
-                                            ></a>
-                                          </Link>
-                                        </div>
-                                      </td>
-                                      <td className="t-desc">2</td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -200,7 +181,7 @@ const TraningCourses = () => {
                               />
                             </div>
                             <h3 className="title">
-                              Bending Machine Operational Training
+                              LASER Machine Operational Training
                             </h3>
                             <div className="bs-table">
                               <div className="table-wrap">
@@ -221,7 +202,7 @@ const TraningCourses = () => {
                                         style={{ width: "25%" }}
                                         className="t-title"
                                       >
-                                        Course Code & Content
+                                        Course Code &amp; Content
                                       </th>
                                       <th
                                         style={{ width: "25%" }}
@@ -232,33 +213,14 @@ const TraningCourses = () => {
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    {/* <tr>
-                                      <td className="t-desc">
-                                        Press Brake Operation Training (RGM2
-                                        series)
-                                      </td>
-                                      <td className="t-desc">
-                                        MCPBE-RG
-                                        <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/RGM2.pdf">
-                                            <a
-                                              target="_blank"
-                                              className="icon icon-pdf"
-                                            ></a>
-                                          </Link>
-                                        </div>
-                                      </td>
-                                      <td className="t-desc">2</td>
-                                    </tr> */}
                                     <tr>
                                       <td className="t-desc">
-                                        Press Brake Operation Training ( HM /
-                                        HDS series )
+                                        Fiber Laser Operation Training - LCG-AJ/ENSIS AJ/VENTIS AJ
                                       </td>
                                       <td className="t-desc">
-                                        MCPBE-HM
+                                        MCLAS-AJ
                                         <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/Bending-HDSseries.pdf">
+                                          <Link href="/assets/doc/schedules/MCLAS-AJ.pdf">
                                             <a
                                               target="_blank"
                                               className="icon icon-pdf"
@@ -266,16 +228,17 @@ const TraningCourses = () => {
                                           </Link>
                                         </div>
                                       </td>
-                                      <td className="t-desc">3</td>
+                                      <td className="t-desc">4</td>
                                     </tr>
                                     <tr>
                                       <td className="t-desc">
-                                        Press Brake Operation Training HG Series
+                                        Laser Operation Training LCG/FO M2 –CO2
+                                        series
                                       </td>
                                       <td className="t-desc">
-                                        MCPBE-HG
+                                        MCLAS-CO2
                                         <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/HM-HG-HDS.pdf">
+                                          <Link href="/assets/doc/schedules/FOM2.pdf">
                                             <a
                                               target="_blank"
                                               className="icon icon-pdf"
@@ -283,7 +246,7 @@ const TraningCourses = () => {
                                           </Link>
                                         </div>
                                       </td>
-                                      <td className="t-desc">3</td>
+                                      <td className="t-desc">4</td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -312,7 +275,7 @@ const TraningCourses = () => {
                               />
                             </div>
                             <h3 className="title">
-                              Software Technology Training
+                              Bending Machine Operational Training
                             </h3>
                             <div className="bs-table">
                               <div className="table-wrap">
@@ -333,7 +296,7 @@ const TraningCourses = () => {
                                         style={{ width: "25%" }}
                                         className="t-title"
                                       >
-                                        Course Code & Content
+                                        Course Code &amp; Content
                                       </th>
                                       <th
                                         style={{ width: "25%" }}
@@ -346,12 +309,13 @@ const TraningCourses = () => {
                                   <tbody>
                                     <tr>
                                       <td className="t-desc">
-                                        Software Training AP100 CAD / Punch CAM
+                                        Press Brake Operation Training (RGM2
+                                        series)
                                       </td>
                                       <td className="t-desc">
-                                        SWAP100P
+                                        MCPBE-RG
                                         <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/AP100-Punch_CAM.pdf">
+                                          <Link href="/assets/doc/schedules/MCPBE-RG.pdf">
                                             <a
                                               target="_blank"
                                               className="icon icon-pdf"
@@ -359,82 +323,17 @@ const TraningCourses = () => {
                                           </Link>
                                         </div>
                                       </td>
-                                      <td className="t-desc">4</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training AP100 CAD / Laser CAM
-                                      </td>
-                                      <td className="t-desc">
-                                        SWAP100L
-                                        <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/AP100-Laser_CAM.pdf">
-                                            <a
-                                              target="_blank"
-                                              className="icon icon-pdf"
-                                            ></a>
-                                          </Link>
-                                        </div>
-                                      </td>
-                                      <td className="t-desc">4</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training Dr. ABE Blank CAM –
-                                        Punch
-                                      </td>
-                                      <td className="t-desc">SWDABE-P</td>
-                                      <td className="t-desc">3</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training Dr. ABE Blank CAM –
-                                        Laser
-                                      </td>
-                                      <td className="t-desc">
-                                        SWDABE-L
-                                        <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/Dr_ABE_Blank_Laser.pdf">
-                                            <a
-                                              target="_blank"
-                                              className="icon icon-pdf"
-                                            ></a>
-                                          </Link>
-                                        </div>
-                                      </td>
-                                      <td className="t-desc">3</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training AP100 CAD + Dr. ABE
-                                        Blank CAM – Punch CAM
-                                      </td>
-                                      <td className="t-desc">SWAPABEP</td>
-                                      <td className="t-desc">4</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training AP100 CAD + Dr. ABE
-                                        Blank CAM – Laser CAM
-                                      </td>
-                                      <td className="t-desc">SWAPABEL</td>
-                                      <td className="t-desc">4</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training Dr. ABE Bend
-                                      </td>
-                                      <td className="t-desc">SWDABEBE</td>
                                       <td className="t-desc">2</td>
                                     </tr>
-                                    {/* <tr>
+                                    <tr>
                                       <td className="t-desc">
-                                        Software Training SheetWorks for Unfold
+                                        Press Brake Operation Training (HM / HDS
+                                        series)
                                       </td>
                                       <td className="t-desc">
-                                        SWSHTW-U
+                                        MCPBE-HM &amp; HDS
                                         <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/Sheetworks for Unfold.pdf">
+                                          <Link href="/assets/doc/schedules/MCPBE-HMANDHDS.pdf">
                                             <a
                                               target="_blank"
                                               className="icon icon-pdf"
@@ -442,24 +341,16 @@ const TraningCourses = () => {
                                           </Link>
                                         </div>
                                       </td>
-                                      <td className="t-desc">4</td>
+                                      <td className="t-desc">3</td>
                                     </tr>
                                     <tr>
                                       <td className="t-desc">
-                                        Software Training SheetWorks for Tube
-                                      </td>
-                                      <td className="t-desc">SWSHTW-T</td>
-                                      <td className="t-desc">4</td>
-                                    </tr> */}
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training VPSS 3i PD + Blank
-                                        Plus _ Punch
+                                        Press brake Operation Training HRB &amp; HG Series
                                       </td>
                                       <td className="t-desc">
-                                        SWVP3I-P
+                                        MCPBE-HRB &amp; HG
                                         <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/VPSS3i_PD_Blank-Punch.pdf">
+                                          <Link href="/assets/doc/schedules/MCPBE-HRBANDHG.pdf">
                                             <a
                                               target="_blank"
                                               className="icon icon-pdf"
@@ -467,42 +358,7 @@ const TraningCourses = () => {
                                           </Link>
                                         </div>
                                       </td>
-                                      <td className="t-desc">4</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training VPSS 3i PD + Blank
-                                        Plus _ Laser
-                                      </td>
-                                      <td className="t-desc">
-                                        SWVP3I-L
-                                        <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/VPSS3i_PD_Blank-Laser.pdf">
-                                            <a
-                                              target="_blank"
-                                              className="icon icon-pdf"
-                                            ></a>
-                                          </Link>
-                                        </div>
-                                      </td>
-                                      <td className="t-desc">4</td>
-                                    </tr>
-                                    <tr>
-                                      <td className="t-desc">
-                                        Software Training VPSS 3i PD + Bend Plus
-                                      </td>
-                                      <td className="t-desc">
-                                        SWVP3I-B
-                                        <div className="action-wrap">
-                                          <Link href="/assets/doc/schedules/VPSS3i_PD_BendPlus.pdf">
-                                            <a
-                                              target="_blank"
-                                              className="icon icon-pdf"
-                                            ></a>
-                                          </Link>
-                                        </div>
-                                      </td>
-                                      <td className="t-desc">4</td>
+                                      <td className="t-desc">3</td>
                                     </tr>
                                   </tbody>
                                 </table>

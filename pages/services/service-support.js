@@ -197,7 +197,7 @@ const ServiceSupport = () => {
               </div>
             </section>
 
-            <section>
+            {/* <section>
               <div className="bs-section">
                 <div className="container">
                   <div className="sec-cont">
@@ -245,28 +245,28 @@ const ServiceSupport = () => {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
         </main>
         <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: 'amada',
-            item: `https://www.amada.ae/`,
-          },
-          {
-            position: 2,
-            name: 'services',
-            item: `https://www.amada.ae/services/service-support`,
-          },
-          {
-            position: 3,
-            name: 'service support',
-            item: `https://www.amada.ae/services/service-support`,
-          },
-        ]}
-      />
+          itemListElements={[
+            {
+              position: 1,
+              name: 'amada',
+              item: `https://www.amada.ae/`,
+            },
+            {
+              position: 2,
+              name: 'services',
+              item: `https://www.amada.ae/services/service-support`,
+            },
+            {
+              position: 3,
+              name: 'service support',
+              item: `https://www.amada.ae/services/service-support`,
+            },
+          ]}
+        />
       </Layout>
     </>
   );
