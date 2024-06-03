@@ -95,7 +95,7 @@ function Footer({ footer, flashNews }) {
                               return (
                                 <>
                                   <li key={index} className="item">
-                                    <a href={ele.url === "#" || ele.url === "" ? "javascript:void(0)" : ele.url} target={`${ele.url && ele.url.includes("http") ? '_blank' : '_self'}`} className="link">{ele.subMenu}
+                                    <a href={ele.url === "#" || ele.url === "" ? "javascript:void(0)" : ele.url} target={`${ele.url && ele.url.includes("http") ? '_blank' : '_self'}`} className="link no-uppercase">{ele.subMenu}
                                     </a>
                                   </li>
                                 </>
@@ -134,7 +134,7 @@ function Footer({ footer, flashNews }) {
                                 <>
 
                                   <li key={index} className="item">
-                                    <a href={ele.url === "#" || ele.url === "" ? "javascript:void(0)" : ele.url} target={`${ele.url && ele.url.includes("http") ? '_blank' : '_self'}`} className="link">{ele.subMenu}</a>
+                                    <a href={ele.url === "#" || ele.url === "" ? "javascript:void(0)" : ele.url} target={`${ele.url && ele.url.includes("http") ? '_blank' : '_self'}`} className="link no-uppercase">{ele.subMenu}</a>
                                   </li>
                                 </>
                               );

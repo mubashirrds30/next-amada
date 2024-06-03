@@ -16,13 +16,13 @@ export const getServerSideProps = async (context) => {
   );
   const json = await res.json();
 
-  if(json.length > 0){
+  if (json.length > 0) {
     return {
       props: { data: json },
     }
-  }else{
+  } else {
     return {
-      notFound : true
+      notFound: true
     }
   }
 
@@ -35,7 +35,7 @@ function Product({ data }) {
   }, []);
   const nextRouter = useRouter();
 
-  
+
   const product = data[0];
   // console.log(product, 'prooo')
 
@@ -43,19 +43,19 @@ function Product({ data }) {
   var numberOfDaysToAdd = 30;
   var result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
   // console.log(new Date(result))
-  
-  
+
+
   function formatDate(date) {
     var d = new Date(date),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-  
-    if (month.length < 2) 
-        month = '0' + month;
-    if (day.length < 2) 
-        day = '0' + day;
-  
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear();
+
+    if (month.length < 2)
+      month = '0' + month;
+    if (day.length < 2)
+      day = '0' + day;
+
     return [year, month, day].join('-');
   }
 
@@ -85,13 +85,13 @@ function Product({ data }) {
         <ProductJsonLd
           productName={product.name}
           images={[
-            `${process.env.REACT_APP_BASE_URL}${product.smallImage.url}`
+            `${process.env.REACT_APP_BASE_URL}${product?.smallImage?.url}`
           ]}
           description={product.description}
           brand="Amada"
           manufacturerName="AMADA MIDDLE EAST FZCO"
           manufacturerLogo="https://www.amada.ae/assets/images/logo.png"
-          
+
           releaseDate={product.published_at}
           aggregateRating={{
             ratingValue: '4.5',
@@ -101,7 +101,7 @@ function Product({ data }) {
             {
               author: {
                 type: 'Organization',
-              name: 'Amada Middle East FZCO',
+                name: 'Amada Middle East FZCO',
               },
               datePublished: product.published_at,
               reviewBody: product.description,
@@ -113,7 +113,7 @@ function Product({ data }) {
               },
               publisher: {
                 type: 'Organization',
-              name: 'Amada Middle East FZCO',
+                name: 'Amada Middle East FZCO',
               },
             },
           ]}
@@ -123,12 +123,12 @@ function Product({ data }) {
               url: `https://www.amada.ae/${product?.product_category?.slug}/${product.slug}`,
               availability: 'InStock',
               seller: {
-                      name: 'Amada Middle East FZCO',
-                    },
+                name: 'Amada Middle East FZCO',
+              },
               priceValidUntil: formatDate(result)
             },]}
-            mpn={product.name}
-            sku='Amada Middle East FZCO'
+          mpn={product.name}
+          sku='Amada Middle East FZCO'
 
         />
       </Layout>

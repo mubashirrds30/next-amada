@@ -54,7 +54,7 @@ function Gallery({ news }) {
                                 data-background-image={`${REACT_APP_BASE_URL}${ele?.image?.url}`}
                               >
                                 <div className="gallery-slide-info">
-                                  <p className="text">{ele.title}</p>
+                                  <p className="text">{ele?.title}</p>
                                 </div>
                               </SwiperSlide>
                             </>

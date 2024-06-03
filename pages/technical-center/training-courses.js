@@ -82,7 +82,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/Traning course - Laser.jpg"
+                                data-src="/assets/images/vc/Training course - Punching.jpg"
                                 alt="training-2"
                               />
                             </div>
@@ -163,7 +163,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/Traning course - Laser.jpg"
+                                data-src="/assets/images/vc/Training course - Punching.jpg"
                                 alt="training-2"
                               />
                             </div>
@@ -176,7 +176,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/Traning course - Bending.jpg"
+                                data-src="/assets/images/vc/Training course - Laser.jpg"
                                 alt="training-1"
                               />
                             </div>
@@ -257,7 +257,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/Traning course - Bending.jpg"
+                                data-src="/assets/images/vc/Training course - Laser.jpg"
                                 alt="training-1"
                               />
                             </div>
@@ -270,7 +270,7 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/Training course - Software.jpeg"
+                                data-src="/assets/images/vc/Training course - Bending.jpg"
                                 alt="about"
                               />
                             </div>
@@ -369,7 +369,195 @@ const TraningCourses = () => {
                             <div className="img-wrap">
                               <img
                                 className="lozad"
-                                data-src="/assets/images/vc/Training course - Software.jpeg"
+                                data-src="/assets/images/vc/Training course - Bending.jpg"
+                                alt="about"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li className="item">
+                        <div className="bs-img-desc">
+                          <div className="left-side">
+                            <div className="img-wrap">
+                              <img
+                                className="lozad"
+                                data-src="/assets/images/vc/about.jpg"
+                                alt="about"
+                              />
+                            </div>
+                            <h3 className="title">
+                              Software Technology Training
+                            </h3>
+                            <div className="bs-table">
+                              <div className="table-wrap">
+                                <table
+                                  className="table"
+                                  cellPadding="0"
+                                  cellSpacing="0"
+                                >
+                                  <thead>
+                                    <tr>
+                                      <th
+                                        style={{ width: "50%" }}
+                                        className="t-title"
+                                      >
+                                        Course Details
+                                      </th>
+                                      <th
+                                        style={{ width: "25%" }}
+                                        className="t-title"
+                                      >
+                                        Course Code &amp; Content
+                                      </th>
+                                      <th
+                                        style={{ width: "25%" }}
+                                        className="t-title"
+                                      >
+                                        No. of Days
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training AP100 CAD / Punch CAM
+                                      </td>
+                                      <td className="t-desc">
+                                        SWAP100P
+                                        <div className="action-wrap">
+                                          <Link href="/assets/doc/schedules/AP100-Punch_CAM.pdf">
+                                            <a
+                                              target="_blank"
+                                              className="icon icon-pdf"
+                                            ></a>
+                                          </Link>
+                                        </div>
+                                      </td>
+                                      <td className="t-desc">4</td>
+                                    </tr>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training AP100 CAD / Laser CAM
+                                      </td>
+                                      <td className="t-desc">
+                                        SWAP100L
+                                        <div className="action-wrap">
+                                          <Link href="/assets/doc/schedules/AP100-Laser_CAM.pdf">
+                                            <a
+                                              target="_blank"
+                                              className="icon icon-pdf"
+                                            ></a>
+                                          </Link>
+                                        </div>
+                                      </td>
+                                      <td className="t-desc">4</td>
+                                    </tr>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training Dr. ABE Blank CAM –
+                                        Laser
+                                      </td>
+                                      <td className="t-desc">
+                                        SWDABE-L
+                                        <div className="action-wrap">
+                                          <Link href="/assets/doc/schedules/Dr_ABE_Blank_Laser.pdf">
+                                            <a
+                                              target="_blank"
+                                              className="icon icon-pdf"
+                                            ></a>
+                                          </Link>
+                                        </div>
+                                      </td>
+                                      <td className="t-desc">3</td>
+                                    </tr>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training SheetWorks for Unfold
+                                      </td>
+                                      <td className="t-desc">
+                                        SWSHTW-U
+                                        <div className="action-wrap">
+                                          <Link href="/assets/doc/schedules/Sheetworks for Unfold.pdf">
+                                            <a
+                                              target="_blank"
+                                              className="icon icon-pdf"
+                                            ></a>
+                                          </Link>
+                                        </div>
+                                      </td>
+                                      <td className="t-desc">4</td>
+                                    </tr>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training SheetWorks for Tube
+                                      </td>
+                                      <td className="t-desc">SWSHTW-T</td>
+                                      <td className="t-desc">4</td>
+                                    </tr>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training VPSS 3i PD + Blank Plus
+                                        _ Punch
+                                      </td>
+                                      <td className="t-desc">
+                                        SWVP3I-P
+                                        <div className="action-wrap">
+                                          <Link href="/assets/doc/schedules/VPSS3i_PD_Blank-Punch.pdf">
+                                            <a
+                                              target="_blank"
+                                              className="icon icon-pdf"
+                                            ></a>
+                                          </Link>
+                                        </div>
+                                      </td>
+                                      <td className="t-desc">4</td>
+                                    </tr>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training VPSS 3i PD + Blank Plus
+                                        _ Laser
+                                      </td>
+                                      <td className="t-desc">
+                                        SWVP3I-L
+                                        <div className="action-wrap">
+                                          <Link href="/assets/doc/schedules/VPSS3i_PD_Blank-Laser.pdf">
+                                            <a
+                                              target="_blank"
+                                              className="icon icon-pdf"
+                                            ></a>
+                                          </Link>
+                                        </div>
+                                      </td>
+                                      <td className="t-desc">4</td>
+                                    </tr>
+                                    <tr>
+                                      <td className="t-desc">
+                                        Software Training VPSS 3i PD + Bend Plus
+                                      </td>
+                                      <td className="t-desc">
+                                        SWVP3I-B
+                                        <div className="action-wrap">
+                                          <Link href="/assets/doc/schedules/VPSS3i_PD_BendPlus.pdf">
+                                            <a
+                                              target="_blank"
+                                              className="icon icon-pdf"
+                                            ></a>
+                                          </Link>
+                                        </div>
+                                      </td>
+                                      <td className="t-desc">4</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="right-side">
+                            <div className="img-wrap">
+                              <img
+                                className="lozad"
+                                data-src="/assets/images/vc/about.jpg"
                                 alt="about"
                               />
                             </div>

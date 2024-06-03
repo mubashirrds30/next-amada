@@ -55,7 +55,7 @@ function Banner({ banner }) {
             delay: 5000,
           }}
           pagination={{ clickable: true }}
-          // navigation={true}
+        // navigation={true}
         >
           {banner?.map((ele, index) => {
             return (
@@ -103,12 +103,12 @@ function Banner({ banner }) {
                 ) : (
                   <>
                     <SwiperSlide
-                      className={`slide-item ${
-                        ele?.isProduct ? "typ-product" : ""
-                      }`}
+                      className={`slide-item ${ele?.isProduct ? "typ-product" : ""
+                        }`}
                       key={index}
                     >
-                      <div className="banner-title-wrap">
+                      <div className={`banner-title-wrap ${ele?.isProduct ? "typ-product-title" : ""
+                        }`}>
                         {ele?.isProduct ? (
                           <h2 className="banner-title">{ele?.title}</h2>
                         ) : (

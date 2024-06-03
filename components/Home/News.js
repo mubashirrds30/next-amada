@@ -31,7 +31,7 @@ function News({ event }) {
               {linkedin?.slice(0, 3).map((ele, index) => {
                 return (
                   <>
-                    {ele?.isLinkedin  && ele?.url && ele?.smallImage?.url && ele?.title && (
+                    {ele?.isLinkedin && ele?.url && ele?.smallImage?.url && ele?.title && (
                       <>
                         {/* <Link href={ele?.url} key={index}> */}
                         <li className="item" key={index}>
@@ -81,17 +81,17 @@ function News({ event }) {
                             className="img-wrap bs-news lozad-background lozad"
                             data-background-image={`${REACT_APP_BASE_URL}${ele?.smallImage?.url}`}
                           >{
-                            ele?.gallery.length === 0 && ele.pdfFile && ele?.pdfFile.url  ? 
-                              <a href={`${REACT_APP_BASE_URL}${ele?.pdfFile.url}`} 
-                              target="_blank"
-                              rel="noreferrer" 
-                              className="news-link">
-                              </a>
-                            : 
-                            <Link href={`/news-events/${ele?.slug}`} key={index}>
-                                <a className="news-link"></a>
-                              </Link>
-                          }
+                              ele?.gallery?.length === 0 && ele?.pdfFile && ele?.pdfFile?.url ?
+                                <a href={`${REACT_APP_BASE_URL}${ele?.pdfFile?.url}`}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="news-link">
+                                </a>
+                                :
+                                <Link href={`/news-events/${ele?.slug}`} key={index}>
+                                  <a className="news-link"></a>
+                                </Link>
+                            }
                             <div className="news-info">
                               <p className="desc">{ele?.title}</p>
                             </div>
@@ -115,9 +115,9 @@ function News({ event }) {
           </div>
         </div>
       </div>
-      {event?.news_events?.map((ele, i)=>{
-          return (
-            <>
+      {event?.news_events?.map((ele, i) => {
+        return (
+          <>
             <NewsArticleJsonLd
               keyOverride={i}
               url={ele.isLinkedin ? ele.url : `https://www.amada.ae/news-events/${ele.slug}`}
@@ -132,9 +132,9 @@ function News({ event }) {
               body={ele.title}
               publisherLogo="https://www.amada.ae/assets/images/logo.png"
             />
-            </>
-          )
-         })}
+          </>
+        )
+      })}
     </div>
   );
 }

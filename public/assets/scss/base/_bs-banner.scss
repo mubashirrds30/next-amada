@@ -163,6 +163,9 @@
           margin-top: 2rem;
         }
       }
+      .typ-product-title{
+        max-width: 100rem;
+      }
       .banner-title,
       .banner-sub-title,
       .mod-count-text .count,
@@ -286,6 +289,7 @@
     }
     .swiper-slide {
       &.typ-product {
+        
         .banner-title-wrap {
           top: auto;
           left: 3rem;

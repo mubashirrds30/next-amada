@@ -85,7 +85,7 @@ function Introduction() {
                                 all of its products.
                               </p>
                               <p>
-                                With more than 70 years of experience in the
+                                With more than 75 years of experience in the
                                 development of metal working machinery, Amada is
                                 confident that it will continuously maintain a
                                 spirit of originality, guided with a viewpoint
@@ -96,9 +96,9 @@ function Introduction() {
                                 United Arab Emirates, is a subsidiary of Amada
                                 Co. Ltd providing Sales and after sales services
                                 to the customers in Gulf and Middle East
-                                countries such as United Arab Emirates, Kingdom
-                                of Saudi Arabia, Kuwait, Oman, Bahrain, Jordan,
-                                Lebanon and Qatar.
+                                countries such as <strong>United Arab Emirates, Kingdom
+                                  of Saudi Arabia, Kuwait, Oman, Bahrain, Jordan,
+                                  Lebanon and Qatar</strong>.
                               </p>
                             </div>
                           </div>
@@ -170,24 +170,24 @@ function Introduction() {
           </div>
         </main>
         <BreadcrumbJsonLd
-        itemListElements={[
-          {
-            position: 1,
-            name: 'amada',
-            item: `https://www.amada.ae/`,
-          },
-          {
-            position: 2,
-            name: 'company profile',
-            item: `https://www.amada.ae/company-profile/introduction`,
-          },
-          {
-            position: 3,
-            name: 'introduction',
-            item: `https://www.amada.ae/company-profile/introduction`,
-          },
-        ]}
-      />
+          itemListElements={[
+            {
+              position: 1,
+              name: 'amada',
+              item: `https://www.amada.ae/`,
+            },
+            {
+              position: 2,
+              name: 'company profile',
+              item: `https://www.amada.ae/company-profile/introduction`,
+            },
+            {
+              position: 3,
+              name: 'introduction',
+              item: `https://www.amada.ae/company-profile/introduction`,
+            },
+          ]}
+        />
       </Layout>
     </>
   );

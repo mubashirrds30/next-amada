@@ -22,6 +22,7 @@ export async function getServerSideProps() {
 }
 
 function NewsEvents({ event }) {
+  console.log('the events', event)
 
   return (
     <>
@@ -45,7 +46,7 @@ function NewsEvents({ event }) {
               ? <>
                 <Banner event={event} />
                 <Breadcrum event={event} />
-                {event.newsSection.news_events.length > 0 && event.newsSection.isActive ? <NewsCards event={event} /> : <div className="mod-greeting"><h1 className="title">Coming soon</h1></div>}
+                {event?.newsSection?.news_events?.length > 0 && event?.newsSection?.isActive ? <NewsCards event={event} /> : <div className="mod-greeting"><h1 className="title">Coming soon</h1></div>}
 
               </> :
               <div className="mod-greeting"><h1 className="title">Coming soon</h1></div>
