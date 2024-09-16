@@ -6,11 +6,14 @@ import VideoModal from "../Home/VideoModal";
 import Specs from "../Table/Specs";
 import ProductFeatures from "./ProductFeatures";
 import ProductSubFeature from "./ProductSubFeature";
+import { useGlobalContext } from "../../hooks/useGlobalContext";
 
 const { REACT_APP_BASE_URL } = process.env;
 
 function ProductInfo({ product }) {
   // console.log("info====>", product);
+  const { setIsModalOpen, setDownloadBrochureUrl, setProduct } = useGlobalContext();
+
   const [showModal, setShowModal] = useState(false);
   const [videoUrl, setVideoUrl] = useState("");
 
@@ -78,7 +81,12 @@ function ProductInfo({ product }) {
               <div className="action-wrap">
                 {product.brochure && product.brochure !== null && (
                   <a
-                    href={`${REACT_APP_BASE_URL}${product.brochure.url}`}
+                    // href={`${REACT_APP_BASE_URL}${product.brochure.url}`}
+                    onClick={() => {
+                      setIsModalOpen(true);
+                      setDownloadBrochureUrl(`${REACT_APP_BASE_URL}${product.brochure.url}`);
+                      setProduct(product.name);
+                    }}
                     className="bs-btn btn-default download-btn"
                     target="_blank"
                     rel="noreferrer"

@@ -3,14 +3,17 @@ import lozad from "lozad";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import { useGlobalContext } from "../../hooks/useGlobalContext";
 const { REACT_APP_BASE_URL } = process.env;
 
 function Products({ product, slug }) {
+  const { setIsModalOpen, setDownloadBrochureUrl, setProduct } = useGlobalContext();
   useEffect(() => {
     const { observe } = lozad();
     observe();
   }, []);
 
+  const { REACT_APP_BASE_URL } = process.env;
   return (
     <div>
       <section>
@@ -36,12 +39,30 @@ function Products({ product, slug }) {
                           </ReactMarkdown>
                         </div>
                         <div className="action-wrap">
-                          <Link href={`/${slug}/${ele.slug}`}>
-                            <a className="bs-btn btn-default">know more</a>
-                          </Link>
+                          {/* <Link href={`/${slug}/${ele.slug}`}> */}
+                          <a onClick={() => {
+
+
+                            setIsModalOpen(true);
+                            setDownloadBrochureUrl(`${REACT_APP_BASE_URL}${ele.brochure.url}`);
+                            setProduct(ele.name);
+
+
+                            // setIsModalOpen(true); setDownloadBrochureUrl(`${API_URL}${item.brochurePDF.url}`); setProduct(item.productName)
+                          }} className="bs-btn btn-default">know more</a>
+                          {/* </Link> */}
                           {ele.brochure && product.brochure !== null && (
                             <a
-                              href={`${REACT_APP_BASE_URL}${ele.brochure.url}`}
+                              onClick={() => {
+                                setIsModalOpen(true);
+                                setDownloadBrochureUrl(`${REACT_APP_BASE_URL}${ele.brochure.url}`);
+                                setProduct(ele.name);
+                                // console.log(ele.brochure.url, 'check ele.brochure.url')
+                              }
+                              }
+
+
+                              // href={`${REACT_APP_BASE_URL}${ele.brochure.url}`}
                               target="_blank"
                               rel="noreferrer"
                             >
